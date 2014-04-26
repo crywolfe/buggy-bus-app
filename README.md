@@ -1,4 +1,4 @@
-== README
+## README [![Build Status](https://travis-ci.org/crywolfe/buggy-bus-app.svg?branch=develop)](https://travis-ci.org/crywolfe/buggy-bus-app)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
