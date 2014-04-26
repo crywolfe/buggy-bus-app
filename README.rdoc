@@ -2,6 +2,8 @@
 
 == README
 
+DIV DIAGRAM IS SHARED ON GOOGLE DRIVE
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
