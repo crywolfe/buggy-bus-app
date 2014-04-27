@@ -1,6 +1,8 @@
 ## BuggyBus App [![Build Status](https://travis-ci.org/crywolfe/buggy-bus-app.svg?branch=develop)](https://travis-ci.org/crywolfe/buggy-bus-app)
 ### [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/1067256#)
 
+###[Google Spreadsheet](https://drive.google.com/?tab=mo&authuser=0#folders/0B-WKIr3Eehrgc3ItVW51MG9YdFU)
+
 DIV DIAGRAM IS SHARED ON GOOGLE DRIVE
 
 This README would normally document whatever steps are necessary to get the
