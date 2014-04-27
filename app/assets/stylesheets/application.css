@@ -25,7 +25,7 @@ body {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 400px;
   height: 600px;
   background: #ee3e64; 
   
@@ -44,7 +44,7 @@ body {
   position: absolute;
   top: 04%;
   left: 01%;
-  width: 500px;
+  width: 490px;
   height: 50px;
   background: lightyellow; 
 }
@@ -53,8 +53,41 @@ body {
   position: absolute;
   top: 50%;
   left: 01%;
-  width: 500px;
+  width: 490px;
   height: 46px;
   background: lightblue; 
 }
- 
+
+#interior_body {
+  
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: gray; 
+}
+
+from {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: gray;
+  
+}
+
+to {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: darkgray;
+  
+}
+
+
+
+
