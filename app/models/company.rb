@@ -1,4 +1,4 @@
-class Company  < ActiveRecord::Base
+class Company < ActiveRecord::Base
   has_many :reviews
   has_many :schedules
 end
