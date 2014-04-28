@@ -3,6 +3,9 @@ Company.delete_all
 Review.delete_all
 Schedule.delete_all
 
+# ChinaBus is company_id 2
+# Bolt is company_id 3
+
 #Create Users --------------------------
 
 taylor_swift = User.create({
@@ -76,13 +79,13 @@ bette_davis = User.create({
   company_id: 1
   })
 
-@china_bus_review = Review.create({
+Review.create({
     post: "Chinabus rocks my socks bro.",
     date: "1/5/2030",
     rating: 4,
     like: 3,
     user_id: 2,
-    company_id: 2
+    company_id: 1
   })
 
 @bolt_bus_review = Review.create({
@@ -125,7 +128,8 @@ bette_davis = User.create({
   company_id: 1
   })
 
-@china_bus_schedules = Schedule.create({
+#china bus
+Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "NYC",
@@ -135,10 +139,35 @@ bette_davis = User.create({
   duration: "10h 5m",
   company_id: 2
   })
-
-@bolt_bus_schedules = Schedule.create({
+#bolt bus
+Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/2014",
+  arrival_time: "3:53 pm",
+  arrival_location: "DC",
+  duration: "6h 2m",
+  company_id: 3
+  })
+
+
+#bolt bus
+Schedule.create({
+  departure_date: "5/5/1994",
+  departure_time: "4:55 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/2014",
+  arrival_time: "3:53 pm",
+  arrival_location: "DC",
+  duration: "6h 2m",
+  company_id: 3
+  })
+
+#bolt bus
+Schedule.create({
+  departure_date: "5/5/1994",
+  departure_time: "5:58 am",
   departure_location: "NYC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
