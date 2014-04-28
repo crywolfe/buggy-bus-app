@@ -1,60 +1,137 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-document {
-   
-  
-  
-}
-
 body {
-  
+
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 500px;
   height: 600px;
-  background: #ee3e64; 
-  
+  background: #f5974a;
+
 }
 
-#header {
+#login {
+  position: fixed;
+  top: 20;
+  right: 0px;
+  width: 25;
+  height: 20;
+  background: white;
+
+}
+
+
+header {
   position: absolute;
   top: 10%;
   left: 50%;
   width: 500px;
   height: 100px;
-  background: #003e64;
+  background: #0c7bb3;
 }
 
-#title {
+#company_name {
   position: absolute;
   top: 04%;
   left: 01%;
-  width: 500px;
+  width: 490px;
   height: 50px;
-  background: lightyellow; 
+  background: #79aac3;
 }
 
 #slogan {
   position: absolute;
   top: 50%;
   left: 01%;
-  width: 500px;
+  width: 490px;
   height: 46px;
-  background: lightblue; 
+  background: #b2c9b1;
 }
- 
+
+#main {
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: #b6a89c;
+}
+
+#from {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  width: 100px;
+  height: 20px;
+  background: #8f8a73;
+
+}
+
+#to {
+  position: absolute;
+  top: 15%;
+  left: 27%;
+  width: 100px;
+  height: 20px;
+  background: #8f8a73;
+}
+
+#time_leaving {
+  position: absolute;
+  top: 15%;
+  left: 51%;
+  width: 100px;
+  height: 20px;
+  background: #8f8a73;
+
+}
+
+#oneway {
+  position: absolute;
+  top: 5%;
+  left: 62%;
+  width: 80px;
+  height: 20px;
+  background: #8f8a73;
+
+}
+
+#roundtrip {
+  position: absolute;
+  top: 5%;
+  left: 81%;
+  width: 80px;
+  height: 20px;
+  background: #8f8a73;
+
+}
+
+#seasonal_message {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 180px;
+  height: 25px;
+  background: #8f8a73;
+
+}
+
+#lucky {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 180px;
+  height: 25px;
+  background: #8f8a73;
+
+}
+
+#search {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  width: 180px;
+  height: 25px;
+  background: #8f8a73;
+
+}

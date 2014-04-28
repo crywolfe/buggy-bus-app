@@ -31,7 +31,7 @@ cody_banks = User.create({
 
 harrison_ford = User.create({
   name: "Harrison Ford",
-  email "harrison@ford.com",
+  email: "harrison@ford.com",
   password: "password"
   })
 
@@ -65,134 +65,136 @@ bette_davis = User.create({
   password: "password"
   })
 
-#Create Companies --------------------
-
-mega_bus = Company.create({
-  company_name: "Mega Bus",
-  base_url: "https://us.megabus.com/Default.aspx"
-  })
-
-china_bus = Company.create({
-  company_name: "China Bus",
-  base_url: "http://www.gotobus.com/bus-tickets/"
-  })
-
-bolt_bus = Company.create({
-  company_name: "Bolt Bus",
-  base_url: "https://www.boltbus.com/"
-  })
-
-greyhound = Company.create({
-  company_name: "Greyhound",
-  base_url: "https://www.greyhound.com/"
-  })
-
-peter_pan = Company.create({
-  company_name: "Peter Pan",
-  base_url: "http://peterpanbus.com/"
-  })
-
 #Create Reviews --------------------------
 
-mega_bus_review = Review.create({
+@mega_bus_review = Review.create({
   post: "Mega Bus more like Mega-lame-o bus, enough said.",
   date: "1/5/2020",
   rating: 1,
-  like: 0
+  like: 0,
+  user_id: 1,
+  company_id: 1
   })
 
-china_bus_review = Review.create({
+@china_bus_review = Review.create({
     post: "Chinabus rocks my socks bro.",
     date: "1/5/2030",
     rating: 4,
-    like: 3
+    like: 3,
+    user_id: 2,
+    company_id: 2
   })
 
-bolt_bus_review = Review.create({
+@bolt_bus_review = Review.create({
   post: "I love Bolt Bussssss!!! But the guy next to me was so weird lolz. ",
   date: "1/5/2010",
   rating: 4,
   like: 6,
+  user_id: 3,
+  company_id: 3
   })
 
-greyhound_review = Review.create({
+@greyhound_review = Review.create({
   post: "I met my wife on Greyhound, ps she's super hawt",
   date: "1/19/2020",
   rating: 5,
-  like: 4
+  like: 4,
+  user_id: 4,
+  company_id: 4
   })
 
-peter_pan_review = Review.create({
+@peter_pan_review = Review.create({
   post: "I lost my v-card to Pieter Pan, don't tell my boyfriend Hansel",
   date: "5/5/3020",
   rating: 3,
-  like: 96
+  like: 96,
+  user_id: 5,
+  company_id: 5
   })
 
-#Connect review to bus company -----------------------------------
+#Create Schedules -----------------------------------
 
-mega_bus.reviews << mega_bus_review
-china_bus.reviews << china_bus_review
-bolt_bus.reviews << bolt_bus_review
-greyhound.reviews << greyhound_review
-peter_pan.reviews << peter_pan_review
-
-#Create Schedules
-
-mega_bus_schedules = Schedule.create({
+@mega_bus_schedules = Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "NYC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
   arrival_location: "Boston",
-  duration: "too long"
+  duration: "5h 2m",
+  company_id: 1
   })
 
-china_bus_schedules = Schedule.create({
+@china_bus_schedules = Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "NYC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
   arrival_location: "Trenton",
-  duration: "too long"
+  duration: "10h 5m",
+  company_id: 2
   })
 
-bolt_bus_schedules = Schedule.create({
+@bolt_bus_schedules = Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "NYC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
   arrival_location: "DC",
-  duration: "too long"
+  duration: "6h 2m",
+  company_id: 3
   })
 
-greyhound_schedules = Schedule.create({
+@greyhound_schedules = Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "DC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
   arrival_location: "NYC",
-  duration: "too long"
+  duration: "7h 5m",
+  company_id: 4
   })
 
-peter_pan_schedules = Schedule.create({
+@peter_pan_schedules = Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:52 am",
   departure_location: "DC",
   arrival_date: "5/5/2014",
   arrival_time: "3:53 pm",
   arrival_location: "Trenton",
-  duration: "too long"
+  duration: "9h 4m",
+  company_id: 5
   })
 
-# Connect schedules to Companies --------------------
 
-mega_bus.schedules << mega_bus_schedules
-china_bus.schedules << china_bus_schedules
-bolt_bus.schedules << bolt_bus_schedules
-greyhound.schedules << greyhound_schedules
-peter_pan.schedules << peter_pan_schedules
+#Create Companies --------------------
+
+mega_bus = Company.create({
+  company_name: "Mega Bus",
+  base_url: "https://us.megabus.com/Default.aspx",
+  })
+
+china_bus = Company.create({
+  company_name: "China Bus",
+  base_url: "http://www.gotobus.com/bus-tickets/",
+  })
+
+bolt_bus = Company.create({
+  company_name: "Bolt Bus",
+  base_url: "https://www.boltbus.com/",
+  })
+
+greyhound = Company.create({
+  company_name: "Greyhound",
+  base_url: "https://www.greyhound.com/",
+  })
+
+peter_pan = Company.create({
+  company_name: "Peter Pan",
+  base_url: "http://peterpanbus.com/",
+  })
+
+

@@ -9,6 +9,7 @@ class CreateSearches < ActiveRecord::Migration
       t.string :arrival_location
       t.string :departure_location
       t.string :duration
+      t.references :user
       t.timestamps
     end
   end
