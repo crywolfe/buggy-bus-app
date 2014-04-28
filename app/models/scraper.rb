@@ -6,7 +6,7 @@ require 'open-uri'
 
 class Scraper
 
-  attr_accessor :url
+  attr_accessor :url, :date
 
   def fetch
 
@@ -42,4 +42,12 @@ class Scraper
   end
 
 
+end
+
+
+class GotoBus < Scraper
+  def search_url
+    # base_url + date + from_to
+    # particular format for GotoBus
+  end
 end
