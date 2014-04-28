@@ -3,6 +3,6 @@ class User < ActiveRecord::Base
 
   has_many :reviews
 
-  validates :name, presence: true
+  validates :name, :email, presence: true
   validates :email, uniqueness: {case_sensitive: false}
 end
