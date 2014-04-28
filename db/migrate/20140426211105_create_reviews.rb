@@ -5,6 +5,8 @@ class CreateReviews < ActiveRecord::Migration
       t.string :date
       t.integer :rating
       t.integer :like
+      t.references :user
+      t.references :company
       t.timestamps
     end
   end
