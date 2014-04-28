@@ -1,24 +1,37 @@
 body {
 
   position: relative;
-  top: 0;
-  left: 0;
+  top: 0px;
+  left: 0px;
   width: 500px;
   height: 600px;
   background: #f5974a;
-
 }
 
 #login {
   position: fixed;
   top: 20;
-  right: 0px;
-  width: 25;
-  height: 20;
+  right: 30px;
+  width: 90px;
+  height: 50px;
   background: white;
-
+}
+#login_detail {
+  position: fixed;
+  top: 30;
+  right: 30px;
+  width: 255px;
+  height: 80px;
+  background: red;
+  z-index: 1;
 }
 
+#login_detail div {
+  display: inline-block;
+
+
+
+}
 
 header {
   position: absolute;
