@@ -19,6 +19,18 @@ body {
 
 }
 
+#login_detail {
+  position: fixed;
+  top: 20;
+  right: 0px;
+  width: 25;
+  height: 100;
+  background: black;
+
+
+
+}
+
 
 header {
   position: absolute;
