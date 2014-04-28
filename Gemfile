@@ -15,6 +15,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'factory_girl_rails'
   gem 'rails-erd'
+  gem 'simplecov', '~> 0.7.1', require: false
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
