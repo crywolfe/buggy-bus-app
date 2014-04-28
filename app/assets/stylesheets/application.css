@@ -11,17 +11,19 @@ body {
   left: 0;
   width: 500px;
   height: 600px;
-  background: #f5c7d3;
+  background: #f5974a;
 
 }
 
 #login {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 190;
+  position: fixed;
+  top: 20;
+  right: 0px;
+  width: 25;
   height: 20;
   background: white;
+
+}
 
 }
 
