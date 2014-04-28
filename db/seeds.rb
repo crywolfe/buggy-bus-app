@@ -198,15 +198,3 @@ peter_pan = Company.create({
   })
 
 
-# mega_bus.schedules << mega_bus_schedules
-# china_bus.schedules << china_bus_schedules
-# bolt_bus.schedules << bolt_bus_schedules
-# greyhound.schedules << greyhound_schedules
-# peter_pan.schedules << peter_pan_schedules
-
-
-# mega_bus.reviews << mega_bus_review
-# china_bus.reviews << china_bus_review
-# bolt_bus.reviews << bolt_bus_review
-# greyhound.reviews << greyhound_review
-# peter_pan.reviews << peter_pan_review
