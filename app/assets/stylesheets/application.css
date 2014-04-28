@@ -68,23 +68,77 @@ body {
   background: gray; 
 }
 
-from {
+
+#from {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 500px;
-  height: 300px;
-  background: gray;
+  top: 20%;
+  left: 5%;
+  width: 100px;
+  height: 20px;
+  background: brown;
   
 }
 
-to {
+
+#time_leaving {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 500px;
-  height: 300px;
-  background: darkgray;
+  top: 15%;
+  left: 51%;
+  width: 100px;
+  height: 20px;
+  background: brown;
+  
+}
+
+#to {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 100px;
+  height: 20px;
+  background: brown;
+  
+}
+
+
+#oneway {
+  position: absolute;
+  top: 5%;
+  left: 62%;
+  width: 80px;
+  height: 20px;
+  background: brown;
+  
+}
+
+
+#lucky {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 180px;
+  height: 25px;
+  background: brown;
+  
+}
+
+#search {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  width: 180px;
+  height: 25px;
+  background: brown;
+  
+}
+
+#roundtrip {
+  position: absolute;
+  top: 5%;
+  left: 81%;
+  width: 80px;
+  height: 20px;
+  background: brown;
   
 }
 
