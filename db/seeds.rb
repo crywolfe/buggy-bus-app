@@ -7,7 +7,7 @@ Schedule.delete_all
 # ChinaBus is company_id 2
 # Bolt is company_id 3
 #Greyhound is company 4
-#Peter PAn is company 5
+#Peter Pan is company 5
 
 #Create Users --------------------------
 
@@ -81,6 +81,7 @@ admin = User.create({
 
 #Create Reviews --------------------------
 
+#Megabus
 Review.create({
   post: "Mega Bus more like Mega-lame-o bus, enough said.",
   date: "1/5/2020",
@@ -90,6 +91,7 @@ Review.create({
   company_id: 1
   })
 
+#Chinabus
 Review.create({
     post: "Chinabus rocks my socks bro.",
     date: "1/5/2030",
@@ -99,6 +101,7 @@ Review.create({
     company_id: 2
   })
 
+#Bolt bus
 Review.create({
   post: "I love Bolt Bussssss!!! But the guy next to me was so weird lolz. ",
   date: "1/5/2010",
@@ -108,6 +111,7 @@ Review.create({
   company_id: 3
   })
 
+#Greyhound
 Review.create({
   post: "I met my wife on Greyhound, ps she's super hawt",
   date: "1/19/2020",
@@ -117,6 +121,7 @@ Review.create({
   company_id: 4
   })
 
+#Peter Pan
 Review.create({
   post: "I lost my v-card to Pieter Pan, don't tell my boyfriend Hansel",
   date: "5/5/3020",
@@ -128,6 +133,7 @@ Review.create({
 
 #Create Schedules -----------------------------------
 
+#Megabus
 Schedule.create({
   departure_date: "5/5/1994",
   departure_time: "3:00 am",
