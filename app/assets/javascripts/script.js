@@ -1,28 +1,30 @@
-
-<<<<<<< HEAD
-  $(document.body).click(function() {
-    $("#login.detail").slideDown( "slow", function() {
-
-      alert("Slide")
-
-=======
   $( document ).ready(function() {
+    // EVENT HANDLER
+    // 1. CLICK ON LOGIN
     $( "#login_detail" ).hide();
     $( "#login" ).click(function () {
       $( "#login_detail" ).slideDown( "slow", function() {
         });
->>>>>>> css
+
     });
 
+    // 2. CLICK SEARCH
+    $( "#search_results" ).hide();
+    $( "#search" ).click(function () {
+      $( "#search_results" ).slideDown( "slow", function() {
+        });
+    });
 
-  });
+    // 3. CLICK LUCKY
+    $( "#lucky_results" ).hide();
+    $( "#lucky" ).click(function () {
+      $( "#lucky_results" ).slideDown( "slow", function() {
+        });
+    });
 
-  // $( "#login" ).click(function() {
-  //   $( "#login_detail" ).slideDown( "slow", function() {
-  //     alert("SLIDEDOWN")
-  //     // Animation complete.
-  //   });
-  // });
+    // NEED TO BE ABLE TO SLIDE DOWN ALL THE DIVS ON THE PAGE WHEN THESE SLIDEDOWN EVENTS OCCUR
+
+
 
 
 
