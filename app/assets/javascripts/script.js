@@ -3,7 +3,7 @@
     // 1. CLICK ON LOGIN
     $( "#login_detail" ).hide();
     $( "#login" ).click(function () {
-      $( "#login_detail" ).slideDown( "slow", function() {
+      $( "#login_detail" ).slideToggle( "slow", function() {
         });
     });
     // 2. CLICK SEARCH
