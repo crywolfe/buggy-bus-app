@@ -14,7 +14,8 @@ class BuggyBusesController < ApplicationController
   def create
     @search = Search.new(search_params)
     if @search.save
-      redirect_to("/searches")
+      redirect_to("/searches/#{@search.id}")
+      # @search[params][:id]
     else
       render :new
     end
