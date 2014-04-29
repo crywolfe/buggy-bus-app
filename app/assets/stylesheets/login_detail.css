@@ -1,0 +1,13 @@
+#login_detail {
+  position: fixed;
+  top: 30;
+  right: 30px;
+  width: 255px;
+  height: 80px;
+  background: red;
+  z-index: 1;
+}
+
+/*THIS ISN'T DOING ANYTHING...*/
+#login_detail div {
+  display: inline-block;
