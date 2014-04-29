@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   # get '/' => 'searches#index'
   resources :searches
+  resources :buggy_buses
 
-  # post '/searches' => 'searches#create'
+
+  post '/' => 'buggy_buses#create'
   # get '/buggy_buses' => 'buggy_buses#index'
 
   # resources :users
