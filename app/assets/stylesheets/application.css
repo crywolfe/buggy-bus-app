@@ -14,13 +14,20 @@
  *= require_self
  */
 body {
-
   position: relative;
   top: 0px;
   left: 0px;
   width: 500px;
   height: 600px;
-  background: #f5974a;
+
+  background: url('buggybus_background.jpg') repeat-x #dfdfdf; /* add a fallback color of #d6d6d6 */
+      background-size: 100%;
+
+  color: #000000;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 1.7; /* line-height is unit-less */
+  font-size: 14px;
+
 }
 
 #login {
@@ -40,6 +47,9 @@ header {
   width: 500px;
   height: 100px;
   background: #0c7bb3;
+  display: inline-block;
+  text-align: center;
+
 }
 
 #company_name {
