@@ -1,37 +1,46 @@
 class SearchesController < ApplicationController
 
   def index
-    # @schedules = Search.all
+    @searches = Search.all
+    @schedules = Schedule.all
   end
-# User.where("name = :name and email = :email", { name: "Joe", email: "joe@example.com" })
-# @schedules = Schedule.where("departure_location = :departure_location and arrival_location = :arrival_location", { departure_location: "#{search.departure_location}", arrival_location: "search.arrival_location" })
-#   def show
-#      search = Search.find(params["id"])
-#      @schedules = Schedule.where("departure_location = :departure_location and arrival_location = :arrival_location", { departure_location: "#{search.departure_location}", arrival_location: "search.arrival_location" })
-# binding.pry
-#     # @schedules = Schedule.where([
-#     #   departure_location: search.departure_location,
-#     #   arrival_location: search.arrival_location,
-#     #   departure_date: search.departure_date])
 
-#     # @search = Search.find_by(id: params[:id])
-#     # @searches = Search.all
-#     # # binding.pry
-#     # @schedules = Search.all
-#       end
+  def show
+    search = Search.find(params["id"])
+     @schedules = Schedule.where(
+      departure_location: "#{search.departure_location}",
+      arrival_location: "#{search.arrival_location}",
+       departure_date: "#{search.departure_date}"
+       )
 
+    # respond_to do |format|
+    #   format.json { render json: @schedules}
+    # end
+    # binding.pry
+  end
 
-#    # def get_schedules
-#    #    Schedule.where departure_time: "NYC", arrival_location: "Boston", departure_date: "5/5/1994" do |schedule|
-#    #    puts schedule
-#    # end
+  def new
+    @search = Search.new
+  end
 
+  def create
+    @search = Search.new(search_params)
+    if @search.save
+      redirect_to("/searches/#{@search.id}")
+    else
+      render :new
+    end
+  end
 
-#   def search
-#   end
+  private
 
+  def search_params
+    # binding.pry
+    params.require(:search).permit(
+    :departure_location,
+    :arrival_location,
+    :departure_date
+    )
+  end
 
 end
-
-
-

@@ -1,3 +1,77 @@
-<!-- <h1>Yos</h1> -->
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <meta charset="utf-8">
+  <title>Buggy Bus</title>
+</head>
+<body>
+  <div id='login'>
+    login/signup
+
+  </div>
+
+  <header>
+    <div id='company_name'>
+      <p>TITLE - INSIDE DIV HEADER</p>
+
+    </div>
+    <div id='slogan'>
+      <p>SLOGAN - INSIDE DIV HEADER</p>
+    </div>
+  </header>
+ <div id='main'>
+    MAIN CONTENT
+    <div id='departure_location'>
+
+     <%= form_for :search, :url => {:action => "create"} do |f| %>
+        <%= f.label(:departure_location) %>
+        <%= f.text_field(:departure_location) %>
+    </div>
+
+    <div id='arrival_location'>
+       <%= f.label(:arrival_location) %>
+        <%= f.text_field(:arrival_location) %>
+    </div>
+
+    <div id='departure_time'>
+       <%= f.label(:departure_date) %>
+        <%= f.text_field(:departure_date) %>
+    </div>
+    <%= submit_tag("Search") %>
+
+    <% end %>
+
+    <div id='oneway'>
+      oneway
+    </div>
+    <div id='roundtrip'>
+      roundtrip
+    </div>
+
+    <div id='seasonal_message'>
+      seasonal message
+    </div>
+    <div id='lucky'>
+      lucky
+    </div>
+    <div id='search'>
+      search
+    </div>
+  </div>
+
+<!-- <p> -->
+<%# @schedules.where departure_location: "#{params["search"]["departure_location"]}" do |schedule| %>
+
+  <%#= schedule %>
+  <%# schedule.each do |details| %>
+
+  <%#= details.duration %>
+<%# end %>
+<%# end %>
+<!-- </p> -->
 
 
+
+</body>
+</html>
