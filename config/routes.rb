@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :buggy_buses
 
 
-  post '/' => 'buggy_buses#create'
+  # post '/' => 'buggy_buses#create'
   # get '/buggy_buses' => 'buggy_buses#index'
 
   # resources :users

@@ -24,7 +24,7 @@
     MAIN CONTENT
     <div id='departure_location'>
 
-      <%= form_for :search do |f| %>
+     <%= form_for :search, :url => {:action => "create"} do |f| %>
         <%= f.label(:departure_location) %>
         <%= f.text_field(:departure_location) %>
     </div>
@@ -58,8 +58,18 @@
     <div id='search'>
       search
     </div>
-  </div> -->
+  </div>
 
+<!-- <p> -->
+<%# @schedules.where departure_location: "#{params["search"]["departure_location"]}" do |schedule| %>
+
+  <%#= schedule %>
+  <%# schedule.each do |details| %>
+
+  <%#= details.duration %>
+<%# end %>
+<%# end %>
+<!-- </p> -->
 
 
 

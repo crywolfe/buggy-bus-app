@@ -1,9 +1,23 @@
 <h1>Your Requested Schedule Madam or Sir</h1>
 
 <p>
-<% @schedules %>
-</p>
 
+
+<% @schedules.each do |schedule| %>
+  <% schedule %>
+<% end %>
+
+<%# @schedules.where departure_location: "#{params["search"]["departure_location"]}" do |schedule| %>
+
+  <%#= schedule %>
+  <%# schedule.each do |details| %>
+
+  <%#= details.duration %>
+<%# end %>
+<%# end %>
+<!-- </p> -->
+
+<!-- @schedules.where departure_location: "#{params["search"]["departure_location"]}", arrival_location: "#{params["search"]["arrival_location"]}" do |schedule| -->
 
 
 
