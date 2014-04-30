@@ -1,0 +1,369 @@
+/* Journey search result */ 
+
+div.journeyresult div.JourneyList ul {
+	margin: 0 0 9px -10px;
+	padding: 0 20px 0 0;
+    width: 100%; }
+
+div.journeyresult div.JourneyList ul.seat {
+	background: #f3f3f3; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzZjNmMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlM2UzZTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f3f3f3 0%, #e3e3e3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e3e3e3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f3f3f3 0%,#e3e3e3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f3 0%,#e3e3e3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f3 0%,#e3e3e3 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f3f3f3 0%,#e3e3e3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#e3e3e3',GradientType=0 ); /* IE6-8 */}
+	
+div.journeyresult div.JourneyList ul.none .seats-available {
+	display:none; }	
+
+div.journeyresult div.JourneyList ul.seat {
+	padding: 12px 20px 5px 0; }
+	
+div.journeyresult div.JourneyList p.seats-available {
+	color: #020167;
+    font-weight: bold;
+    margin: 10px 0 12px;
+    position: relative;
+    text-indent: 25px; }		
+    
+div.journeyresult div.JourneyList p.seats-available:before {
+	background:url(../images/seats/seats.png) no-repeat -386px 0;
+	content: " ";
+    display: block;
+    height: 18px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 18px; }    
+
+div.journeyresult div.JourneyList li.one {
+    padding: 0 0 0 15px;
+    width: 40px; } 
+    
+div.journeyresult div.JourneyList li.two {
+	width: 420px; }  
+	
+div.journeyresult div.JourneyList li.five span {
+	color: #737272; }
+	
+div.journeyresult div.JourneyList li.five span:after {
+	content:"\A"; 
+	white-space:pre; }		  
+	
+.seat-select-notice p {
+	color: #ff0000 !important;
+	font-weight: bold; }
+	 
+.seat-select-notice p:first-child {
+	margin: 0; }	 
+	
+.content_div .col2_2 .normalmessage {
+	padding: 0;
+}	
+	
+/*.content_div .col2_2 .normalmessage {
+	background-color: #040965;
+	background-image: none;
+	-webkit-border-radius: 70px;
+	-moz-border-radius: 70px;
+	border-radius: 70px;
+	color: #ffffff;
+	margin: 0 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;
+	position: relative;
+	behavior: url(css/PIE.htc); }
+	
+.content_div .col2_2 .normalmessage:before {
+	content: " ";
+	background:url(../images/seats/seats.png) no-repeat -444px 0;
+	content: " ";
+	display: block;
+    height: 21px;
+    left: 8px;
+    position: absolute;
+    top: 5px;
+    width: 21px; }	*/
+	
+.content_div .col2_2 .normalmessage p {
+	margin: 0 0 0 0;
+	padding: 7px 0 0;
+	font-weight: bold;
+	text-indent: 21px; }		
+	
+.searchagain-inner {
+	font-size: 12px;
+	color: #666666;
+	margin: 0 0 0 34px; }
+	
+.searchagain-inner:before {
+	background: url("../images/seats/seats.png") no-repeat scroll -343px 0;
+    content: " ";
+    display: block;
+    height: 22px;
+    left: 8px;
+    position: absolute;
+    top: 12px;
+    width: 27px;
+}		
+	
+
+.tooltip .tip, .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+div#additional-information div.journey, div#additional-information-review div.journey { background: #DAD; padding: 10px 0; margin: 10px 0; }
+div.passenger-edit, div.passenger-details {  padding: 10px 0; }
+
+div.seat-selector{ width:100%;  background-color:#afb; }
+div.seat-selector div.seat-summary{float:left; width:300px; }
+div.seat-selector div.seat-plan{float:left; width:500px; background-color:#ccc; }
+
+div.seat-selector div.deck{ width:50%; float:left; }
+
+div.seat-summary{ }
+div.seat-summary ul{ list-style:none; margin:0; padding:8px;}
+div.seat-summary li{  margin:0; padding:1px; border:2px solid white;}
+div.seat-summary li.highlight{ border:2px solid #fbd705;}
+div.seat-summary .seatnum{ font-weight:bold; float:right; margin-left:-30px;}
+div.seat-summary .count{ font-weight:bold; float:right;}
+div.seat-summary .mob{ float:right; display:block; background:transparent url('../images/mobility.gif') no-repeat 0 0;  width:29px; height:29px; margin-right:30px;}
+
+h2.your-journey {
+	color: #040965;
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0 0 14px 7px; }
+
+.ui-tooltip, .arrow:after {
+  background: white;
+  border: 2px solid #FFCC00 !important;
+}
+.ui-tooltip {
+  padding: 10px 15px;
+  color: #666;
+  font-size:14px;
+  box-shadow: 0 0 7px #999;
+  max-width:263px;
+  text-align:left;
+  position: absolute;
+  border-radius: 10px !important; 
+  -webkit-border-radius: 10px !important; 
+  -moz-border-radius:10px !important; 
+  behavior: url(css/PIE.htc); 
+}
+
+.arrow {
+  width: 25px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -12px;
+  bottom: -16px;
+  background: url('../images/seats/arrow.png') no-repeat 0 -16px;
+}
+.arrow.top {
+  top: -16px;
+  bottom: auto;
+  background: url('../images/seats/arrow.png') no-repeat 0 0;
+}
+.arrow.left {
+  left: 20%;
+}
+/*.arrow:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: -20px;
+  width: 25px;
+  height: 25px;
+  box-shadow: 6px 5px 9px -9px black;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+  
+}
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
+}*/
+
+
+/*Susie added for seat reservation*/
+.journey-details{width:32.55542590431739%; float:left;} 
+.journey-details .resv_item{ width:262px; float:left; padding:  0 15px;}
+.seatkey-wrapper{float:left; width: 66.27771295215869%;}
+.seat-key{float:left; background:#fff; padding:15px; border-radius: 10px; -webkit-border-radius: 10px;-moz-border-radius:10px; 
+          position:relative; behavior: url(css/PIE.htc);}
+.seat-key ul{float:left; width:268px; padding: 0; margin:0;}
+.seat-key ul li{ font-size: 1.1em; line-height: 16px; display:block; }
+.seat-key .seat{ background: url('../images/seats/seats.png') no-repeat !important; display: block; height: 43px; width: 39px; margin:-5px 0 0 0;}
+.seat-key .SFRN{background-position:-44px 0 !important;}
+.seat-key .STBL{background-position:-134px 0 !important;}
+.seat-key .SLEG{background-position:-90px 0 !important; }
+
+.seat-key .MOB{background-position:-469px 0 !important;}
+
+.seat-key .unavailable{background-position:-179px 0 !important;}
+.seat-key .remove{background-position:-214px 8px !important;}
+.seat-key ul li.warning{border-top:1px solid #ccc; padding:10px 0 0 40px; position:relative;}
+.seat-key ul li.warning span{background: url('../images/seats/seats.png') no-repeat -254px 0 !important; display: inline-block; height:50px; 
+                             width: 40px; position:absolute; top:8px; left:0;}
+
+.seat-key ul li{position: relative;}
+.seat-key .icon-help{ background: url('../images/seats/seats.png') no-repeat -299px -1px !important; height: 16px; position:absolute; top:0; right:16px;}
+hr.separation{height:10px; background: url('../images/seats/separation.png') no-repeat center 0;  float: left; width: 100%; border:none;  filter : alpha(opacity=0); padding:10px 0;}
+
+.seat-summary{ padding: 0 0 0 15px; width:260px !important;}
+.seat-summary h2{padding:0; color: #020167; font-size:20px;  font-weight:normal;}
+.seat-summary p.passengerno{ font-size:14px; font-weight:bold; }
+.seat-summary .prices{padding:15px 0 0 0;}
+.seat-summary .prices span{color: #020167; font-weight:bold; font-size:12px; display:block;}
+.seat-summary .prices span.caption{float:left; width:62%; padding:3px 0;}
+.seat-summary .prices span.value{float:right; width:38%; text-align:right; padding:3px 0;}
+.seat-summary .prices .final{ border-top:1px solid #ccc;}
+.seat-summary .prices .final span{ font-size:18px; font-weight:normal;}
+.seat-summary .summary-wrapper
+{
+	width:230px;
+	padding:15px;
+	border-radius: 10px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius:10px;
+	border:1px solid #ededed;
+	background: #f1eff0; /* Old browsers */
+	background: -moz-linear-gradient(top, #f1eff0 0%, #fffffe 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1eff0), color-stop(100%,#fffffe)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f1eff0 0%,#fffffe 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f1eff0 0%,#fffffe 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f1eff0 0%,#fffffe 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f1eff0 0%,#fffffe 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1eff0', endColorstr='#fffffe',GradientType=0 ); /* IE6-9 */
+	position:relative;
+	behavior: url(css/PIE.htc);
+	}
+div.seat-summary ul{padding:0;}
+div.seat-summary ul li{ padding: 5px 29px 5px 10px; border-radius: 10px; -webkit-border-radius: 10px;-moz-border-radius:10px;
+    behavior: url(css/PIE.htc);background:#fff; position:relative;
+    -webkit-box-shadow: 0px -1px 1px 0px #ccc;
+    -moz-box-shadow:    0px -1px 1px 0px #ccc;
+	box-shadow:         0px -1px 1px 0px #ccc;
+     margin-bottom: 1px; }
+     
+div.seat-summary input {
+	background: none;
+	text-decoration: underline;
+	font-weight: normal;
+	font-size: 16px; }  
+	
+div.seat-summary input:hover {
+	text-decoration: none; }	
+	
+div.seat-summary span.attn-icon {
+	float: left;
+	background:url(../images/seats/seats.png) no-repeat -344px 0;
+    display: block;
+    height: 22px;
+    width: 25px; }	  
+	
+
+	
+     
+div.seat-summary ul li.locked{ background-color:#ddd; color:#888; }
+
+div.seat-summary ul li span{ color:#666;font-size:14px; }
+div.seat-summary span.seatnum{ position:absolute; top:5px; right:5px;} 
+.seat-summary .btn-continue{background:#ffcc00; width:100%; font-size:20px; padding:10px 0; text-align:center; border:none; position:relative;
+                            border-radius: 10px; -webkit-border-radius: 10px;-moz-border-radius:10px; behavior: url(css/PIE.htc); cursor:pointer; margin:15px 0;text-decoration: none;} 
+                            
+.seat-summary .btn-continue[disabled] {
+	background-color: #f1eff0;
+	cursor: default; }                            
+
+.seat-summary a.searchagain{color: #020167; font-size:16px; padding:0 0 10px 0;  display:block;  }
+.seat-summary a.searchagain span{ width:40px; height:30px; display:inline-block;  
+                                  background: url('../images/seats/seats.png') no-repeat -339px 0; margin: 0 0 -12px  0;}
+.seat-summary p.warning{ position:relative; padding: 10px 0 0 40px;}
+.seat-summary p.warning span{background: url('../images/seats/seats.png') no-repeat -254px 0; display: inline-block; height:50px;  width: 40px; 
+                             position:absolute; top:8px; left:0;}
+                             
+.seat-plan h2.deckseat{ color: #020167; font-size: 20px; font-weight: normal; padding: 0 0 0 25px;}
+div.seat-selector div.deck-wrapper{float:left; width:255px;  margin:0 0 0 25px; background:#fff; behavior: url(css/PIE.htc); 
+     position:relative; border-radius: 10px; -webkit-border-radius: 10px;-moz-border-radius:10px; text-align: center;
+    -webkit-box-shadow: 0px -2px 2px 0px #ccc;
+    -moz-box-shadow:    0px -2px 2px 0px #ccc;
+	box-shadow:         0px -2px 2px 0px #ccc;}
+div.seat-selector div.deck-wrapper h2{margin:0; padding:12px 8px;}
+div.seat-selector div.deck{ width:225px; background:#eaeaea; float:left; padding:30px 0 30px 32px;border-radius: 10px; -webkit-border-radius: 10px;
+                            -moz-border-radius:10px; position:relative; behavior: url(css/PIE.htc);}
+div.seat-selector div.seat-plan { float: left; width: 565px; background:none; }
+  
+.validationsummary {
+	margin:10px !important;
+	clear: both; 
+	border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	-moz-border-radius:10px; 
+    border:none !important; 
+    color:#cc0000 !important; 
+    font-size:14px; 
+    font-style:italic; 
+    text-indent: 23px;
+	background-color: #fff0f0 !important;
+	position: relative;
+    behavior: url(css/PIE.htc);  }
+    
+.validationsummary:before {
+	background-image: url(../images/seats/seats.png);
+    background-position: -422px 0;
+    content: " ";
+    display: block;
+    height: 17px;
+    left: 10px;
+    position: absolute;
+    top: 11px;
+    width: 17px; }    
+                      
+.validationsummary ul{ list-style:none; padding: 2px 0 0 12px;}
+.validationsummary ul li{color:#cc0000; font-size:14px; font-style:italic;}
+div.seat-selector{ background:none; }
+
+/*tooltip*/
+.ui-tooltip .describe{ width:210px; border-bottom:1px solid #ccc; color:#020167; font-weight:bold; font-size:14px; position:relative; min-height:43px; 
+                       padding: 0 0 0 40px;}
+.ui-tooltip .describe span{background: url("../images/seats/seats.png") no-repeat 0 0 ;
+    display: block;
+    height: 43px;
+    margin: -5px 0 0;
+    width: 39px;
+    position:absolute;
+    top:5px;
+    left:0;
+    }
+.ui-tooltip .describe span.icon-STBL{background-position: -134px 0 !important;}
+.ui-tooltip .describe span.icon-SLEG{background-position: -88px 0 !important;}
+.ui-tooltip .describe span.icon-SFRN{background-position: -44px 0 !important;}
+.ui-tooltip .describe span.icon-UNN{background-position: -179px 0 !important;}
+.ui-tooltip .describe span.icon-MOB{background-position: -469px 0 !important;}
+
+.ui-tooltip p.remove-notice {
+	border-top: 1px solid #CCCCCC;
+    color: #666666;
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 8px 0 0 26px;
+    position: relative; }
+    
+.ui-tooltip .clearfix{color:#020167; font-weight:bold; font-size:14px;}
+
+
+
+
+

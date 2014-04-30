@@ -190,5 +190,14 @@
       ]
     },
     "timestamp": 1398814513
+  },
+  "Cucumber Features": {
+    "coverage": {
+      "/Users/Rob/dev/wdi/buggy-bus-app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1398892299
   }
 }

@@ -9,6 +9,7 @@
   <div id='login'>
 <<<<<<< HEAD
     login/signup
+<<<<<<< HEAD
     
 =======
     <p>login/signup</p>
@@ -25,36 +26,49 @@
     </div>
     login_detail
 >>>>>>> css
+=======
+
+>>>>>>> 845fd74c0b9adbc5c21ab71c341fb6757193bed6
   </div>
-  
+
   <header>
     <div id='company_name'>
       <p>TITLE - INSIDE DIV HEADER</p>
-      
+
     </div>
     <div id='slogan'>
       <p>SLOGAN - INSIDE DIV HEADER</p>
     </div>
   </header>
-  <div id='main'>
+ <div id='main'>
     MAIN CONTENT
-    <div id='to'>
-      to
+    <div id='departure_location'>
+
+      <%= form_for :search do |f| %>
+        <%= f.label(:departure_location) %>
+        <%= f.text_field(:departure_location) %>
     </div>
-    <div id='from'>
-      from
+
+    <div id='arrival_location'>
+       <%= f.label(:arrival_location) %>
+        <%= f.text_field(:arrival_location) %>
     </div>
-    
-    <div id='time_leaving'>
-      leaving
+
+    <div id='departure_time'>
+       <%= f.label(:departure_date) %>
+        <%= f.text_field(:departure_date) %>
     </div>
+    <%= submit_tag("Search") %>
+
+    <% end %>
+
     <div id='oneway'>
       oneway
     </div>
     <div id='roundtrip'>
       roundtrip
     </div>
-    
+
     <div id='seasonal_message'>
       seasonal message
     </div>
@@ -64,10 +78,10 @@
     <div id='search'>
       search
     </div>
-  </div>
-    
-    
-  
+  </div> -->
+
+
+
 
 </body>
 </html>

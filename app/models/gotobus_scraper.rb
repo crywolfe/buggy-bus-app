@@ -1,9 +1,9 @@
-require 'nokogiri'
+# require 'nokogiri'
 require 'time'
 require 'open-uri'
-require 'pry'
+# require 'pry'
 
-class Scraper
+class GoToBusScraper
 
   attr_accessor :url, :schedules
 
@@ -53,6 +53,7 @@ class Scraper
         price:              @price
       }
     end
+    # binding.pry
     return @schedules
   end
 
@@ -84,7 +85,7 @@ class Scraper
 
   def get_price(entry)
     # select price and save to instance
-    @price = @prices[entry].text.slice(/\d+/).to_i
+    @price = '$' + @prices[entry].text.slice(/\d+/) + '.00'
   end
 
   def get_company(entry)

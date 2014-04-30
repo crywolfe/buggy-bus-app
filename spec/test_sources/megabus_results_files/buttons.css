@@ -1,0 +1,100 @@
+﻿/*
+input.btn{ height: 30px; line-height:30px; overflow:hidden; border:none; text-indent:-3000px; display:block; background:transparent 0px 0px no-repeat;cursor: pointer;}
+span.btnwrap{ display: inline-block;}
+input.disabled{ background-position:0px -30px; cursor: default; }
+input.btn_search{ width: 88px; height: 31px; background-image: url('../images/btns/search.png') ;  }
+
+input.btn_confirm{ width: 74px; background-image: url('../images/btns/confirm.png');  }
+input.btn_cancel{ width: 73px; background-image: url('../images/btns/cancel.png');  }
+input.btn_back { width: 73px; background-image: url('../images/btns/back.png'); background-repeat: no-repeat; background-position: 0px 1px; }
+input.btn_continue { width: 84px; background-image: url('../images/btns/continue.png');  }
+input.btn_searchagain{ width:114px; background-image: url('../images/btns/search_again.gif');  }
+input.addJourneyButton{ width:173px; background-image: url('../images/btns/add_journey.gif');  }
+input.btn_remove{ width: 122px; background-image: url('../images/btns/remove_journey.gif');  }
+input.add_mobile{ width: 152px; background-image: url('../images/btns/add_mobile.gif');  }
+input.remove_mobile { width: 169px; background-image: url('../images/btns/remove_mobile.gif');  }
+input.btnPay{ width: 169px; background-image: url('../images/btns/pay.gif');  }
+input.add_tesco{ width: 146px; background-image: url('../images/btns/have_token_code.gif'); }
+input.btn_add_token{ width: 86px; background-image: url('../images/btns/add_token.png'); }
+input.btn_complete{ width: 86px; background-image: url('../images/btns/complete.png'); }
+input.btn_tesco_close{ width: 73px; background-image: url('../images/btns/tesco_close.png'); }
+input.btn_login{ width: 73px; background-image: url('../images/btns/login.png'); }
+input.buttonUnregister{ width: 160px;  background-image: url('../images/btns/unregister.png'); }
+input.btn_save{ width: 67px;  background-image: url('../images/btns/save.gif'); }
+input.btn_savechanges{ width: 117px;  background-image: url('../images/btns/save_changes.png'); }
+input.btn_amend{ width: 163px;  background-image: url('../images/btns/amend_selected.png'); }
+input.ammendReservationButton{ width: 163px;  background-image: url('../images/btns/amend_selected.png'); }
+input.amendPassengerDetailsReservationButton{ width: 235px;  background-image: url('../images/btns/amend_selected_passengers.png'); }
+input.btn_RetrivePass{ width: 138px;  background-image: url('../images/btns/requestpassword.png'); }
+input.btn_register{ width: 83px;  background-image: url('../images/btns/register.png'); }
+input.btn_find{ width: 163px;  background-image: url('../images/btns/find_reservations.png'); }
+input.btn_edit{ width: 89px;  background-image: url('../images/btns/edit_details.png'); }
+input.btn_delete_profile{ width: 117px;  background-image: url('../images/btns/delete_profile.png'); }
+input.btn_confirmandpay{ width: 127px;  background-image: url('../images/btns/confirm_and_pay.png'); }
+input.btn_reschedule{ width:129px; background-image: url('../images/btns/reschedule.png');  }
+input.btn_refund{ width:129px; background-image: url('../images/btns/refund.png');  }
+input.btn_processrefund{ width:147px; background-image: url('../images/btns/process_refund.png');  }
+
+    
+input.btn{ height: 30px; line-height:30px; overflow:hidden; border:none; text-indent:-3000px; display:block; background:transparent 0px 0px no-repeat;cursor: pointer;}
+span.btnwrap{ display: inline-block;}
+input.disabled{ background-position:0px -30px; cursor: default; }
+input.btn_search{ width: 88px; height: 31px; background-image: url('../images/btns/search.png') ;  }
+
+input.btn_confirm{ width: 74px; background-image: url('../images/btns/confirm.png');  }
+input.btn_cancel{ width: 73px; background-image: url('../images/btns/cancel.png');  }
+input.btn_back { width: 73px; background-image: url('../images/btns/back.png'); background-repeat: no-repeat; background-position: 0px 1px; }
+input.btn_continue { width: 84px; background-image: url('../images/btns/continue.png');  }
+input.btn_searchagain{ width:114px; background-image: url('../images/btns/search_again.gif');  }
+input.addJourneyButton{ width:173px; background-image: url('../images/btns/add_journey.gif');  }
+input.btn_remove{ width: 122px; background-image: url('../images/btns/remove_journey.gif');  }
+input.add_mobile{ width: 152px; background-image: url('../images/btns/add_mobile.gif');  }
+input.remove_mobile { width: 169px; background-image: url('../images/btns/remove_mobile.gif');  }
+input.btnPay{ width: 169px; background-image: url('../images/btns/pay.gif');  }
+input.add_tesco{ width: 146px; background-image: url('../images/btns/have_token_code.gif'); }
+input.btn_add_token{ width: 86px; background-image: url('../images/btns/add_token.png'); }
+input.btn_complete{ width: 86px; background-image: url('../images/btns/complete.png'); }
+input.btn_tesco_close{ width: 73px; background-image: url('../images/btns/tesco_close.png'); }
+input.btn_login{ width: 73px; background-image: url('../images/btns/login.png'); }
+input.buttonUnregister{ width: 160px;  background-image: url('../images/btns/unregister.png'); }
+input.btn_save{ width: 67px;  background-image: url('../images/btns/save.gif'); }
+input.btn_savechanges{ width: 117px;  background-image: url('../images/btns/save_changes.png'); }
+input.btn_amend{ width: 163px;  background-image: url('../images/btns/amend_selected.png'); }
+input.ammendReservationButton{ width: 163px;  background-image: url('../images/btns/amend_selected.png'); }
+input.amendPassengerDetailsReservationButton{ width: 235px;  background-image: url('../images/btns/amend_selected_passengers.png'); }
+input.btn_RetrivePass{ width: 138px;  background-image: url('../images/btns/requestpassword.png'); }
+input.btn_register{ width: 83px;  background-image: url('../images/btns/register.png'); }
+input.btn_find{ width: 163px;  background-image: url('../images/btns/find_reservations.png'); }
+input.btn_edit{ width: 89px;  background-image: url('../images/btns/edit_details.png'); }
+input.btn_delete_profile{ width: 117px;  background-image: url('../images/btns/delete_profile.png'); }
+input.btn_confirmandpay{ width: 127px;  background-image: url('../images/btns/confirm_and_pay.png'); }
+input.btn_reschedule{ width:129px; background-image: url('../images/btns/reschedule.png');  }
+input.btn_refund{ width:129px; background-image: url('../images/btns/refund.png');  }
+input.btn_processrefund{ width:147px; background-image: url('../images/btns/process_refund.png');  }
+*/
+
+
+input.btn {
+    position: relative;
+    background-color: #ffcc00;
+    border:none;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    behavior: url('/css/PIE.htc');
+    padding: 0px 10px 3px;
+    color: #020167;
+    font-weight: bold;
+    font-size: 1.4em;
+    overflow: visible;
+    font-family: Tahoma, Verdana, Arial, Sans-Serif;
+    cursor: pointer;
+    height: 25px; 
+    line-height:25px;   display:inline-block; text-indent:0;} 
+
+input.btn.disabled 
+{
+    background-color: #565656 !important;
+    color: #838383;
+}
+
