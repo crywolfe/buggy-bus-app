@@ -17,8 +17,10 @@
  */
 
 body {
-  background: url('buggybus_background.jpg') repeat-x #dfdfdf; /* add a fallback color of #d6d6d6 */
-  background-size: 100%;
+  background-color: #661511;
+  background: url('buggybus_background.jpg') center no-repeat #661511; /* add a fallback color of #d6d6d6 */
+  background-size: 1100px;
+  min-height: 300px;
 }
 
 #container {
@@ -43,6 +45,7 @@ h2 {
 }
 
 h3 {
+  font-family: 'Comfortaa', 'cursive';
   color: white;
 
 }
@@ -59,16 +62,17 @@ h3 {
 
 }
 #login p {
+  font-family: 'Comfortaa', 'cursive';
   color:white;
 }
 
 header {
-
   margin: 100 auto;
   width: 100%;
   height: 200px;
   display: inline-block;
   text-align: center;
+  background-color: rgba(0,0,0,.4);
 
 }
 
@@ -93,11 +97,12 @@ header {
 
 #main {
 
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 500px;
+/*  position: absolute;
+*/  
+  margin: 100 auto;
+  width: 100%;
   height: 300px;
+  display: inline-block;
   background: #661511;
   opacity: .8;
 }
@@ -115,7 +120,7 @@ header {
 #from {
   position: absolute;
   top: 15%;
-  left: 2%;
+  left: 5.5%;
   width: 100px;
   height: 20px;
   background: #8f8a73;
@@ -125,7 +130,7 @@ header {
 #to {
   position: absolute;
   top: 15%;
-  left: 27%;
+  left: 30%;
   width: 100px;
   height: 20px;
   background: #8f8a73;
@@ -134,7 +139,7 @@ header {
 #time_leaving {
   position: absolute;
   top: 15%;
-  left: 51%;
+  left: 56%;
   width: 100px;
   height: 20px;
   background: #8f8a73;
@@ -144,7 +149,7 @@ header {
 #oneway {
   position: absolute;
   top: 5%;
-  left: 62%;
+  left: 55%;
   width: 80px;
   height: 20px;
   background: #8f8a73;
@@ -154,7 +159,7 @@ header {
 #roundtrip {
   position: absolute;
   top: 5%;
-  left: 81%;
+  left: 77%;
   width: 80px;
   height: 20px;
   background: #8f8a73;
