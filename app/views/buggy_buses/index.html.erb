@@ -1,85 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
   <meta charset="utf-8">
   <title>Buggy Bus</title>
 </head>
 <body>
-  <div id='login'>
-<<<<<<< HEAD
-    login/signup
-<<<<<<< HEAD
-    
-=======
-    <p>login/signup</p>
-  </div>
-  <div id='login_detail'>
-    <div id='name'>
-      <p>name</p>
-    </div>
-    <div id='email'>
-      <p>email</p>
-    </div>
-    <div id='password'>
-      <p>password</p>
-    </div>
-    login_detail
->>>>>>> css
-=======
 
->>>>>>> 845fd74c0b9adbc5c21ab71c341fb6757193bed6
-  </div>
-
-  <header>
-    <div id='company_name'>
-      <p>TITLE - INSIDE DIV HEADER</p>
-
-    </div>
-    <div id='slogan'>
-      <p>SLOGAN - INSIDE DIV HEADER</p>
-    </div>
-  </header>
- <div id='main'>
-    MAIN CONTENT
-    <div id='departure_location'>
-
-      <%= form_for :search do |f| %>
-        <%= f.label(:departure_location) %>
-        <%= f.text_field(:departure_location) %>
+    <div id='login'>
+      <p>login/signup</p>
     </div>
 
-    <div id='arrival_location'>
-       <%= f.label(:arrival_location) %>
-        <%= f.text_field(:arrival_location) %>
-    </div>
+    <div id='login_detail'>
+      <div id='name'>
+        <p>name</p>
+      </div>
+      <div id='email'>
+        <p>email</p>
+      </div>
+      <div id='password'>
+        <p>password</p>
+      </div>
 
-    <div id='departure_time'>
-       <%= f.label(:departure_date) %>
-        <%= f.text_field(:departure_date) %>
-    </div>
-    <%= submit_tag("Search") %>
+      <button id='submit'>Bada Bing</button>
 
-    <% end %>
+    </div> <!-- login_detail -->
 
-    <div id='oneway'>
-      oneway
-    </div>
-    <div id='roundtrip'>
-      roundtrip
-    </div>
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+          <h2>BUGGY BUS</h2>
+          <h3>BADA BING BADA BUS!</h3>
+        </div>
+      </div>
+    </header>
 
-    <div id='seasonal_message'>
-      seasonal message
-    </div>
-    <div id='lucky'>
-      lucky
-    </div>
-    <div id='search'>
-      search
-    </div>
-  </div> -->
+  <div class="row" style="margin-top: 90px;">
+    <div class="large-5 columns">
+      <div class="small-6 small-offset-1 columns">
 
+    <!-- <div class="small-6 small-centered columns"> -->
+      <div id='main'>
+        <h4>MENU</h4>
+        <div id='to'>
+          <p>to</p>
+        </div>
+        <div id='from'>
+          <p>from</p>
+        </div>
+
+        <div id='time_leaving'>
+          <p>leaving</p>
+        </div>
+        <div id='oneway'>
+          <p>oneway</p>
+        </div>
+        <div id='roundtrip'>
+          <p>roundtrip</p>
+        </div>
+
+        <div id='seasonal_message'>
+          <p>seasonal message</p>
+        </div>
+        <div id='lucky'>
+          <p>lucky</p>
+        </div>
+        <div id='search'>
+          <p>search</p>
+        </div>
+      </div>
+    </div>
+    </div> <!-- large 12 column -->
+  </div> <!-- row -->
 
 
 
