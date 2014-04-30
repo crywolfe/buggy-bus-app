@@ -10,10 +10,10 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  *= require foundation_and_overrides
-
+ *= require_self
+ *= require login_detail
+ *= require search_results
  */
 
 body {
@@ -91,6 +91,14 @@ header {
   background: #661511;
   opacity: .8;
   border-radius: 15px;
+}
+#main h4 {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 22px;
+  color: white;
+
 }
 
 #main p {

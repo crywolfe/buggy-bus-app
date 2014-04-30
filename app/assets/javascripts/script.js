@@ -3,9 +3,17 @@
     // 1. CLICK ON LOGIN
     $( "#login_detail" ).hide();
     $( "#login" ).click(function () {
-      $( "#login_detail" ).slideToggle( 100, function() {
+      $( "#login_detail" ).slideDown( 100, function() {
         });
     });
+
+// 1. CLICK ON BADA BING SUBMIT
+    $( "#submit" ).click(function () {
+      alert("HI");
+      $( "#login_detail" ).slideUp( 100, function() {
+        });
+    });
+
     // 2. CLICK SEARCH
     $( "#search_results" ).hide();
     $( "#search" ).click(function () {
