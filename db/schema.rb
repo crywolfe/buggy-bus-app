@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140426212151) do
     t.string   "arrival_time"
     t.string   "arrival_location"
     t.string   "duration"
+    t.string   "price"
     t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -49,12 +50,8 @@ ActiveRecord::Schema.define(version: 20140426212151) do
 
   create_table "searches", force: true do |t|
     t.string   "departure_date"
-    t.string   "departure_time"
     t.string   "departure_location"
-    t.string   "arrival_date"
-    t.string   "arrival_time"
     t.string   "arrival_location"
-    t.string   "duration"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
