@@ -3,7 +3,7 @@ require 'time'
 require 'open-uri'
 # require 'pry'
 
-class GoToBusScraper
+class GotobusScraper
 
   attr_accessor :url, :schedules
 
@@ -53,7 +53,7 @@ class GoToBusScraper
         price:              @price
       }
     end
-    # binding.pry
+    binding.pry
     return @schedules
   end
 

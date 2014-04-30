@@ -3,7 +3,7 @@ require 'time'
 require 'open-uri'
 # require 'pry'
 
-class MegaBusScraper
+class MegabusScraper
 
   attr_accessor :url, :schedules
 
