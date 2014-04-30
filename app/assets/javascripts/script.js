@@ -9,7 +9,6 @@
 
 // 1. CLICK ON BADA BING SUBMIT
     $( "#submit" ).click(function () {
-      alert("HI");
       $( "#login_detail" ).slideUp( 100, function() {
         });
     });
