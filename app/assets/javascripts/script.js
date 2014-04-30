@@ -3,19 +3,26 @@
     // 1. CLICK ON LOGIN
     $( "#login_detail" ).hide();
     $( "#login" ).click(function () {
-      $( "#login_detail" ).slideToggle( "slow", function() {
+      $( "#login_detail" ).slideDown( 100, function() {
         });
 
     });
 
-    // 2. CLICK SEARCH
+  // 2. CLICK ON BADA BING SUBMIT
+    $( "#submit" ).click(function () {
+      alert("HI");
+      $( "#login_detail" ).slideUp( 100, function() {
+        });
+    });
+
+    // 3. CLICK SEARCH
     $( "#search_results" ).hide();
     $( "#search" ).click(function () {
       $( "#search_results" ).slideDown( "slow", function() {
         });
     });
 
-    // 3. CLICK LUCKY
+    // 4. CLICK LUCKY
     $( "#lucky_results" ).hide();
     $( "#lucky" ).click(function () {
       $( "#lucky_results" ).slideDown( "slow", function() {
