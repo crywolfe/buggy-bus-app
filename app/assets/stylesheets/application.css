@@ -59,7 +59,10 @@ h3, h4 {
   right: 30px;
   width: 90px;
   height: 30px;
-  
+  background: black;
+  opacity: .9;
+  z-index: 1;
+
 }
 
 #login p {
