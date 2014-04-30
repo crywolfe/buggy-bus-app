@@ -3,11 +3,17 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'buggy_buses#index'
+  root 'searches#index'
 
-  get '/buggy_buses' => 'buggy_buses#index'
+  # get '/' => 'searches#index'
+  resources :searches
+  # resources :buggy_buses
 
-  get '/buggy_buses/search' => 'buggy_buses#search'
+
+  # post '/' => 'buggy_buses#create'
+  # get '/buggy_buses' => 'buggy_buses#index'
+
+  # resources :users
 
 
   # Example of regular route:
