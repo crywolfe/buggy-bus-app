@@ -11,8 +11,16 @@ class GotobusScraper
     @schedules = []
   end
 
-  def make_query
+  def make_query(arguments)
 
+    ### logic to interpret arugments for
+    ### departure and arrival locations
+    ### into the matching strings goes HERE
+
+    query_string = Rack::Utils.building_query(
+      #stuff goes here
+      )
+    return @base_url + query_string
   end
 
   def commit_schedules
