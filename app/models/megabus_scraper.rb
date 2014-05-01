@@ -19,9 +19,9 @@ class MegabusScraper
 
 
     query_string = Rack::Utils.building_query({
-      originCode: ###,
-      destinationCode: ###,
-      outboundDepartureDate: ##/##/####,
+      originCode: 'placeholder',
+      destinationCode: 'placeholder',
+      outboundDepartureDate: 'placeholder',
       passengerCount: 1
     })
     return @base_url + query_string
@@ -102,5 +102,3 @@ class MegabusScraper
   end
 
 end
-
-binding.pry
