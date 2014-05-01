@@ -13,10 +13,9 @@
         });
     });
 
-    // 2. CLICK SEARCH
-    $( "#search_results" ).hide();
+    // 2. CLICK BADA BUS SEARCH
     $( "#search" ).click(function () {
-      $( "#search_results" ).slideDown( "slow", function() {
+      $( ".small-block-grid-4" ).slideUp( 250, function() {
         });
     });
 
