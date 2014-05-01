@@ -59,17 +59,37 @@
             <%= form_for :search, :url =>
             {:action => "create"} do |f| %>
             <%= f.label(:departure_location) %>
-            <%= f.text_field(:departure_location) %>
+            <%= f.select :departure_location, 
+              [["Select",""],
+              ['Boston, MA', 'boston'],
+              ['New York, NY', 'nyc'],
+              ['Philadelphia', 'philly'],
+              ['Baltimore, MD', 'baltimore'],
+              ['Washington, DC', 'dc'],
+              ['Richmond, VA', 'richmond'],
+              ['Hampton, VA', 'hampton']]
+            %>
           </p>
+
+          
           <p id='arrival_location'>
             <%= f.label(:arrival_location) %>
-            <%= f.text_field(:arrival_location) %>
+            <%= f.select(:arrival_location, 
+              [["Select",""],
+              ['Boston, MA', 'boston'],
+              ['New York, NY', 'nyc'],
+              ['Philadelphia', 'philly'],
+              ['Baltimore, MD', 'baltimore'],
+              ['Washington, DC', 'dc'],
+              ['Richmond, VA', 'richmond'],
+              ['Hampton, VA', 'hampton']])
+            %>
           </p>        
           <p id='departure_time'>
             <%= f.label(:departure_date) %>
-            <%= f.text_field(:departure_date) %>
+            <input type="date" name="name" value="name"/>         
             <% end %>
-          </p>
+            </p>
           <p id='oneway'>
             <p>oneway</p>
           </p>
