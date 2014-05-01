@@ -1,77 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-  <meta charset="utf-8">
-  <title>Buggy Bus</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <title>Buggy Bus</title>
 </head>
 <body>
-  <div id='login'>
-    login/signup
 
-  </div>
+    <div id='login'>
+      <p>login/signup</p>
+    </div>
 
-  <header>
-    <div id='company_name'>
-      <p>TITLE - INSIDE DIV HEADER</p>
+    <div id='login_detail'>
+      <div id='name'>
+        <p><%= form_for :user, :url => {:action => "create"} do |f| %>
+          <%= f.label(:name) %>
+          <%= f.text_field(:name) %></p>
+      </div>
+      <div id='email'>
+        <p><%= f.label(:email) %>
+          <%= f.text_field(:email) %></p>
+      </div>
+      <div id='password'>
+        <p><%= f.label(:password) %>
+          <%= f.text_field(:password) %>
+          <% end %>
+        </p>
+      </div>
 
-    </div>
-    <div id='slogan'>
-      <p>SLOGAN - INSIDE DIV HEADER</p>
-    </div>
-  </header>
- <div id='main'>
-    MAIN CONTENT
-    <div id='departure_location'>
+      <button id='submit'>Bada Bing</button>
+      
+    </div> <!-- login_detail -->
 
-     <%= form_for :search, :url => {:action => "create"} do |f| %>
-        <%= f.label(:departure_location) %>
-        <%= f.text_field(:departure_location) %>
-    </div>
-
-    <div id='arrival_location'>
-       <%= f.label(:arrival_location) %>
-        <%= f.text_field(:arrival_location) %>
-    </div>
-
-    <div id='departure_time'>
-       <%= f.label(:departure_date) %>
-        <%= f.text_field(:departure_date) %>
-    </div>
-    <%= submit_tag("Search") %>
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+          <h2>BUGGY BUS</h2>
+          <h3>BADA BING BADA BUS!</h3>
+        </div>
+      </div>
+    </header>
+    
+  <div class="row" style="margin-top: 90px;">
+    <div class="large-5 columns">
+      <div class="small-6 small-offset-1 columns">
+        
+    <!-- <div class="small-6 small-centered columns"> -->
+      <div id='main'>
+        <h4>MENU</h4>
+<div id='from'>
+          <p> <%= form_for :search, :url =>
+              {:action => "create"} do |f| %>
+              <%= f.label(:departure_location) %>
+              <%= f.text_field(:departure_location) %></p>
+        </div>
+        <div id='to'>
+          <p><%= f.label(:arrival_location) %>
+            <%= f.text_field(:arrival_location) %></p>
+        </div>
+        
+        
+        <div id='time_leaving'>
+          <p><%= f.label(:departure_date) %>
+        <%= f.text_field(:departure_date) %></p>
+        </div>
+        <%= submit_tag("Search") %>
 
     <% end %>
-
-    <div id='oneway'>
-      oneway
-    </div>
-    <div id='roundtrip'>
-      roundtrip
-    </div>
-
-    <div id='seasonal_message'>
-      seasonal message
-    </div>
-    <div id='lucky'>
-      lucky
-    </div>
-    <div id='search'>
-      search
-    </div>
-  </div>
-
-<!-- <p> -->
-<%# @schedules.where departure_location: "#{params["search"]["departure_location"]}" do |schedule| %>
-
-  <%#= schedule %>
-  <%# schedule.each do |details| %>
-
-  <%#= details.duration %>
-<%# end %>
-<%# end %>
-<!-- </p> -->
-
-
+        <div id='oneway'>
+          <p>oneway</p>
+        </div>
+        <div id='roundtrip'>
+          <p>roundtrip</p>
+        </div>
+        
+        <div id='seasonal_message'>
+          <p>seasonal message</p>
+        </div>
+        <div id='lucky'>
+          <p>lucky</p>
+        </div>
+        <div id='search'>
+          <p>search</p>
+        </div>
+      </div>
+    </div>
+    </div> <!-- large 12 column -->
+  </div> <!-- row -->
+    
+    
 
 </body>
 </html>
