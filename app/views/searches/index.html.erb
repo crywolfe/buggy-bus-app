@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
-  <meta charset="utf-8">
-  <title>Buggy Bus</title>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <title>Buggy Bus</title>
 </head>
 <body>
 
-    <div id='login'>
-      <p>login/signup</p>
-    </div>
+    <div id='login'>
+      <p>login/signup</p>
+    </div>
 
-    <div id='login_detail'>
-      <div id='name'>
-        <p><%= form_for :user, :url => {:action => "create"} do |f| %>
-          <%= f.label(:name) %>
-          <%= f.text_field(:name) %></p>
-      </div>
-      <div id='email'>
-        <p><%= f.label(:email) %>
-          <%= f.text_field(:email) %></p>
-      </div>
-      <div id='password'>
-        <p><%= f.label(:password) %>
+    <div id='login_detail'>
+<!--       <%#= render 'users/form' %>
+ -->      
+
+      <div id='email'>
+        <p><%= form_for :user, :url => {:action => "create"} do |f| %>
+        <p><%= f.label(:email) %>
+            <%= f.text_field(:email) %>
+        </p>
+      </div>
+
+      <div id='password'>
+        <p><%= f.label(:password) %>
           <%= f.text_field(:password) %>
           <% end %>
         </p>
-      </div>
+      </div>
 
-      <button id='submit'>Bada Bing</button>
-      
-    </div> <!-- login_detail -->
+      <button id='submit'>Bada Bing</button>
 
-    <header>
-      <div class="row">
-        <div class="large-12 columns">
-          <h2>BUGGY BUS</h2>
-          <h3>BADA BING BADA BUS!</h3>
-        </div>
-      </div>
-    </header>
-    
-  <div class="row" style="margin-top: 90px;">
-    <div class="large-5 columns">
-      <div class="small-6 small-offset-1 columns">
-        
-    <!-- <div class="small-6 small-centered columns"> -->
-      <div id='main'>
-        <h4>MENU</h4>
-<div id='from'>
-          <p> <%= form_for :search, :url =>
-              {:action => "create"} do |f| %>
-              <%= f.label(:departure_location) %>
-              <%= f.text_field(:departure_location) %></p>
-        </div>
-        <div id='to'>
-          <p><%= f.label(:arrival_location) %>
-            <%= f.text_field(:arrival_location) %></p>
-        </div>
-        
-        
-        <div id='time_leaving'>
-          <p><%= f.label(:departure_date) %>
-        <%= f.text_field(:departure_date) %></p>
-        </div>
-        <%= submit_tag("Search") %>
+    </div> <!-- login_detail -->
 
-    <% end %>
-        <div id='oneway'>
-          <p>oneway</p>
-        </div>
-        <div id='roundtrip'>
-          <p>roundtrip</p>
-        </div>
-        
-        <div id='seasonal_message'>
-          <p>seasonal message</p>
-        </div>
-        <div id='lucky'>
-          <p>lucky</p>
-        </div>
-        <div id='search'>
-          <p>search</p>
-        </div>
-      </div>
-    </div>
-    </div> <!-- large 12 column -->
-  </div> <!-- row -->
-    
-    
+    <header>
+      <div class="row">
+        <div class="large-12 columns">
+          <h2>BUGGY BUS</h2>
+          <h3>BADA BING BADA BUS!</h3>
+        </div>
+      </div>
+    </header>
+    
+  <!-- <div class="row" style="margin-top: 90px;"> -->
+    <!-- <div class="large-5 columns"> -->
+<!--       <div class="small-6 small-offset-1 columns">
+ -->        
+    <div class="small-6 small-centered columns">
+      <div class="panel callout radius">
+
+<!--       <div id='main'>
+ -->         
+        <h4>MENU</h4>
+        
+        <p id='departure_location'>
+          <%= form_for :search, :url =>
+          {:action => "create"} do |f| %>
+          <%= f.label(:departure_location) %>
+          <%= f.text_field(:departure_location) %>
+        </p>
+
+        <p id='arrival_location'>
+          <%= f.label(:arrival_location) %>
+          <%= f.text_field(:arrival_location) %>
+        </p>        
+        <p id='departure_time'>
+          <%= f.label(:departure_date) %>
+          <%= f.text_field(:departure_date) %>
+          <% end %>
+        </p>
+
+        <p id='oneway'>
+          <p>oneway</p>
+        </p>
+       <!--  <p id='roundtrip'>
+          <p>roundtrip</p>
+        </p> -->
+
+        <p id='seasonal_message'>
+          <p>seasonal message</p>
+        </p>
+        <p id='lucky'>
+          <%= submit_tag("Lucky Bada Bus") %>
+        </p>
+        <p id='search'>
+          <%= submit_tag("Bada Bus") %>
+        </p>
+      </div> <!-- 3 columns -->
+<!--       </div>
+ -->
+    <!-- </div> -->
+    </div>
+    </div> <!-- large 12 column -->
+  </div> <!-- row -->
+
+
 
 </body>
 </html>
