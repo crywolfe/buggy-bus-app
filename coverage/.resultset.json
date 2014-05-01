@@ -412,9 +412,7 @@
         null,
         null,
         null,
-        null,
-        null,
-        1
+        null
       ],
       "/Users/Rob/dev/wdi/buggy-bus-app/app/models/user.rb": [
         1,
@@ -435,6 +433,6 @@
         null
       ]
     },
-    "timestamp": 1398957356
+    "timestamp": 1398957772
   }
 }
