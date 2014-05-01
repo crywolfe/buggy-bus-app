@@ -29,6 +29,10 @@ class GotobusScraper
     end
   end
 
+  def company_check
+
+  end
+
   def parse
     self.fetch_html
     for entry in 0...@departure_table.length do
@@ -37,6 +41,7 @@ class GotobusScraper
       self.get_price(entry)
       self.get_company(entry)
       self.calculate_arrival_date
+
       @schedules << Schedule.new({
         departure_location: @departure_location,
         departure_date:     @departure_date,
