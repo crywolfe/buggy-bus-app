@@ -18,7 +18,7 @@ class GotobusScraper
     ### into the matching strings goes HERE
 
     query_string = Rack::Utils.building_query(
-      #stuff goes here
+      'placeholder'
       )
     return @base_url + query_string
   end
