@@ -9,20 +9,23 @@ class MegabusScraper
   def initialize
     @base_url = "http://http://us.megabus.com/JourneyResults.aspx?"
     @schedules = []
+    @city_hash = {
+      'philadelphia' => '127',
+      'washington'   => '142',
+      'baltimore'    => '143',
+      'new york'     => '123',
+      'richmond'     => '132',
+      'hampton'      => '110',
+      'boston'       => '94'
+    }
   end
 
-  def make_query(dep_date, from_location, to_location)
-
-    ### logic to interpret arugments for
-    ### departure and arrival locations
-    ### into the matching codes goes HERE
-
-
-    query_string = Rack::Utils.building_query({
-      originCode: 'placeholder',
-      destinationCode: 'placeholder',
-      outboundDepartureDate: 'placeholder',
-      passengerCount: 1
+  def build_query(dep_date, from_city, to_city)
+    query_string = Rack::Utils.build_query({
+      'outboundDepartureDate' => dep_date,
+      'destinationCode'       => city_hash[to_city],
+      'originCode'            => city_hash[from_city],
+      'passengerCount'        => '1'
     })
     return @base_url + query_string
   end
@@ -85,6 +88,7 @@ class MegabusScraper
         price:              @price
       })
     end
+    binding.pry
     return @schedules
   end
 

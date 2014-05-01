@@ -7,19 +7,26 @@ class GotobusScraper
   attr_accessor :url, :schedules
 
   def initialize
-    @base_url = "http://search.gotobus.com/search/bus.do"
+    @base_url = "http://search.gotobus.com/search/bus.do?"
     @schedules = []
+    @city_hash = {
+      'philadelphia' => 'Philadelphia, PA',
+      'washington'   => 'Washington, DC',
+      'baltimore'    => 'Baltimore, MD',
+      'new York'     => 'New York, NY',
+      'richmond'     => 'Richmond, VA',
+      'hampton'      => 'Hampton, VA',
+      'boston'       => 'Boston, MA'
+    }
   end
 
-  def make_query(dep_date, from_location, to_location)
-
-    ### logic to interpret arugments for
-    ### departure and arrival locations
-    ### into the matching strings goes HERE
-
-    query_string = Rack::Utils.building_query(
-      'placeholder'
-      )
+  def build_query(dep_date, from_city, to_city)
+    query_string = Rack::Utils.build_query({
+      'is_roundtrip' => '0',
+      'bus_from'     => city_hash[from_city.downcase],
+      'bus_to'       => city_hash[to_city.downcase],
+      'filter_date'  => dep_date
+      })
     return @base_url + query_string
   end
 
@@ -53,6 +60,7 @@ class GotobusScraper
         price:              @price
       })
     end
+    binding.pry
     return @schedules
   end
 
@@ -91,6 +99,17 @@ class GotobusScraper
     # Return company text from appropriate HTML node
     @company = @companies[entry].css('td')[2].text
   end
+
+  def get_departure_city
+    @city_hash.keys.each do |city|
+      @departure_city ||= @departure_location.downcase[city]
+    end
+  end
+
+  def get_arrival_city
+
+  end
+
 
   def calculate_arrival_date
     # Determine arrival date by comparing departure
