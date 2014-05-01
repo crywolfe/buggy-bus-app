@@ -17,6 +17,9 @@ group :development, :test do
   gem 'simplecov', '~> 0.7.1', require: false
 end
 
+# rails_12factor to work with heroku
+gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use postgresql as the database for Active Record

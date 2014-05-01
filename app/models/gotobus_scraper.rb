@@ -11,14 +11,26 @@ class GotobusScraper
     @schedules = []
   end
 
-  def make_query
+  def make_query(dep_date, from_location, to_location)
 
+    ### logic to interpret arugments for
+    ### departure and arrival locations
+    ### into the matching strings goes HERE
+
+    query_string = Rack::Utils.building_query(
+      'placeholder'
+      )
+    return @base_url + query_string
   end
 
   def commit_schedules
     @schedules.each do |route_hash|
       route_hash.save
     end
+  end
+
+  def company_check
+
   end
 
   def parse
@@ -29,6 +41,7 @@ class GotobusScraper
       self.get_price(entry)
       self.get_company(entry)
       self.calculate_arrival_date
+
       @schedules << Schedule.new({
         departure_location: @departure_location,
         departure_date:     @departure_date,
