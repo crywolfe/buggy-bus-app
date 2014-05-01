@@ -1,14 +1,14 @@
-<h1>Your Requested Schedule Madam or Sir</h1>
+<h1>Heyso</h1>
 
-<p>
-<% @schedules %>
-</p>
+<% @schedules.each do |schedule| %>
+  <%= schedule.departure_date %>
+  <%= schedule.departure_time %>
+  <%= schedule.departure_location %>
+  <%= schedule.arrival_date %>
+  <%= schedule.arrival_time %>
+  <%= schedule.arrival_location %>
+  <%= schedule.duration %>
 
 
 
-
-<!--
-Schedule.where departure_location: "NYC", arrival_location: "Boston" do |schedule|
-
-puts schedule
-end -->
+<% end %>
