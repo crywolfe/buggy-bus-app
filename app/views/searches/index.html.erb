@@ -7,15 +7,12 @@
   <title>Buggy Bus</title>
 </head>
 <body>
-
-    <div id='login'>
+<!--   <container>
+ -->    <div id='login'>
       <p>login/signup</p>
     </div>
 
-    <div id='login_detail'>
-<!--       <%#= render 'users/form' %>
- -->      
-
+    <div id='login_detail'>    
       <div id='email'>
         <p><%= form_for :user, :url => {:action => "create"} do |f| %>
         <p><%= f.label(:email) %>
@@ -47,8 +44,6 @@
     <!-- <div class="large-5 columns"> -->
 <!--       <div class="small-6 small-offset-1 columns">
  -->     
-
- 
     <ul class="small-block-grid-4">
       <li></li>
       <li>
@@ -103,11 +98,6 @@
       </li>
     </ul>  <!-- small-block-grid-3 -->
   </div> <!-- row -->
-
-
-  <map name="mapper">
-    <area shape="circle" coords="0,100,100" href="/test"/>
-    <map>
 
 </body>
 </html>

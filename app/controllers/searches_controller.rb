@@ -35,7 +35,7 @@ class SearchesController < ApplicationController
   private
 
   def search_params
-    # binding.pry
+    binding.pry
     params.require(:search).permit(
     :departure_location,
     :arrival_location,
