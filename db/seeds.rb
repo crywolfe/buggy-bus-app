@@ -135,7 +135,7 @@ Review.create({
 
 #Megabus
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "01/01/1994",
   departure_time: "3:00 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
@@ -147,7 +147,7 @@ Schedule.create({
 
 #china bus
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "05/05/1994",
   departure_time: "3:15 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
@@ -158,12 +158,12 @@ Schedule.create({
   })
 #bolt bus
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "05/05/1994",
   departure_time: "3:30 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
   arrival_time: "6:45 pm",
-  arrival_location: "Boston",
+  arrival_location: "Hampton",
   duration: "3h 15m",
   company_id: 3
   })
@@ -171,48 +171,114 @@ Schedule.create({
 
 #bolt bus
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "05/05/1994",
   departure_time: "3:55 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
   arrival_time: "6:55 pm",
-  arrival_location: "Boston",
+  arrival_location: "Richmond",
   duration: "3h",
   company_id: 3
   })
 
 #bolt bus
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "05/05/1994",
   departure_time: "6:00 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
   arrival_time: "9:00 pm",
-  arrival_location: "Boston",
+  arrival_location: "Baltimore",
   duration: "3h",
   company_id: 3
   })
 
 #greyhound
 Schedule.create({
-  departure_date: "5/5/1994",
+  departure_date: "05/05/1994",
   departure_time: "6:00 am",
   departure_location: "NYC",
   arrival_date: "5/5/1994",
   arrival_time: "9:53 pm",
-  arrival_location: "Boston",
+  arrival_location: "Philadelphia",
   duration: "3h 53m",
   company_id: 4
   })
 
 #Peter Pan
  Schedule.create({
-  departure_date: "5/5/1994",
-  departure_time: "6:52 am",
-  departure_location: "NYC",
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
   arrival_date: "5/5/1994",
   arrival_time: "6:53 pm",
-  arrival_location: "Boston",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+   Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+   Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
   duration: "6h 1m",
   company_id: 5
   })

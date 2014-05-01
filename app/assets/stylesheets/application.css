@@ -12,6 +12,7 @@
  *
  *= require foundation_and_overrides
  *= require_self
+ *= require panel
  *= require login_detail
  *= require search_results
  */
@@ -22,6 +23,7 @@ body {
   background-size: 1100px;
   min-height: 300px;
   font-family: 'Comfortaa', 'cursive';
+  text-align: center;
 
 }
 
@@ -110,21 +112,17 @@ MENU
   display: inline-block;
   font-size: 18px;
   color: white;
-
 }
-/*
-================================
-PANEL OVERRIDES
-================================
-*/
 
-.panel.callout {
-  background-color: black;
+#search {
+  color:white;
+}
+
+#search_2 {
   opacity: .8;
+  border-radius: 15px;
+  font-family: 'Comfortaa', 'cursive';
+  z-index: 1;
+
 }
 
-.panel.callout.radius {
-  background-color: #661511;
-  opacity: .8;
-  border-radius: 20px;
-}

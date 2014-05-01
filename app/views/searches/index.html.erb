@@ -7,15 +7,12 @@
   <title>Buggy Bus</title>
 </head>
 <body>
-
-    <div id='login'>
+<!--   <container>
+ -->    <div id='login'>
       <p>login/signup</p>
     </div>
 
     <div id='login_detail'>
-<!--       <%#= render 'users/form' %>
- -->      
-
       <div id='email'>
         <p><%= form_for :user, :url => {:action => "create"} do |f| %>
         <p><%= f.label(:email) %>
@@ -42,54 +39,71 @@
         </div>
       </div>
     </header>
-    
+
   <!-- <div class="row" style="margin-top: 90px;"> -->
     <!-- <div class="large-5 columns"> -->
 <!--       <div class="small-6 small-offset-1 columns">
- -->        
-    <div class="small-5 small-centered columns">
-      <div class="panel callout radius">
 
-<!--       <div id='main'>  -->         
-        <h4>MENU</h4>
-        
-        <p id='departure_location'>
-          <%= form_for :search, :url =>
-          {:action => "create"} do |f| %>
-          <%= f.label(:departure_location) %>
-          <%= f.text_field(:departure_location) %>
-        </p>
+ -->
+    <ul class="small-block-grid-4">
+      <li></li>
+      <li>
+        <div class="panel callout radius">
+          <h4>MENU</h4>
 
-        <p id='arrival_location'>
-          <%= f.label(:arrival_location) %>
-          <%= f.text_field(:arrival_location) %>
-        </p>        
-        <p id='departure_time'>
-          <%= f.label(:departure_date) %>
-          <%= f.text_field(:departure_date) %>
-          <% end %>
-        </p>
+          <p id='departure_location'>
+            <%= form_for :search, :url =>
+            {:action => "create"} do |f| %>
+            <%= f.label(:departure_location) %>
+            <%= f.select :departure_location,
+              [["Select",""],
+              ['Boston, MA', 'Boston'],
+              ['New York, NY', 'New York'],
+              ['Philadelphia, PA', 'Philadelphia'],
+              ['Baltimore, MD', 'Baltimore'],
+              ['Washington, DC', 'Washington'],
+              ['Richmond, VA', 'Richmond'],
+              ['Hampton, VA', 'Hampton']]
+            %>
+          </p>
 
-        <p id='oneway'>
-          <p>oneway</p>
-        </p>
-       <!--  <p id='roundtrip'>
-          <p>roundtrip</p>
-        </p> -->
 
-        <!-- <p id='seasonal_message'>
-          <p>seasonal message</p>
-        </p> -->
-        <p id='lucky'>
-          <%= submit_tag("Lucky Bada Bus") %>
-        </p>
-        <p id='search'>
-          <%= submit_tag("Bada Bus") %>
-        </p>
-      </div> <!-- 3 columns -->
-    <!-- </div> -->
-    </div>
-    </div> <!-- large 12 column -->
+          <p id='arrival_location'>
+            <%= f.label(:arrival_location) %>
+            <%= f.select(:arrival_location,
+              [["Select",""],
+              ['Boston, MA', 'Boston'],
+              ['New York, NY', 'New York'],
+              ['Philadelphia, PA', 'Philadelphia'],
+              ['Baltimore, MD', 'Baltimore'],
+              ['Washington, DC', 'Washington'],
+              ['Richmond, VA', 'Richmond'],
+              ['Hampton, VA', 'Hampton']])
+            %>
+          </p>
+          <p id='departure_date'>
+            <%= f.label(:departure_date) %>
+            <%= date_select :search, :departure_date %>
+             <p id='search'>
+            <%= submit_tag("Bada Bus") %>
+          </p>
+            <% end %>
+            </p>
+          <p id='oneway'>
+            <p>oneway</p>
+          </p>
+          <p id='lucky'>
+            <%= submit_tag("Lucky Bada Bus") %>
+          </p>
+
+        </div> <!-- panel callout radius -->
+      </li>
+    </ul>  <!-- small-block-grid-3 -->
   </div> <!-- row -->
+<img src="bear.jpg" alt="" usemap="#mapper" border=0 />
+<map name="mapper">
+  <area shape="circle" coords="0,100,100" href="000100100.html"/>
+
+
 </body>
 </html>
