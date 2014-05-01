@@ -1,6 +1,6 @@
 <h1>Heyso</h1>
 
-<% @schedules.each do |schedule| %>
+<% @search_results.each do |schedule| %>
   <%= schedule.departure_date %>
   <%= schedule.departure_time %>
   <%= schedule.departure_location %>
@@ -10,3 +10,7 @@
   <%= schedule.duration %>
 
 <% end %>
+
+<%#= collection_select(:departure_location, :search_id, Search.all, :id, :name_with_initial, prompt: true) %>
+
+<%#= collection_select(:post, :author_id, Author.all, :id, :name_with_initial, prompt: true) %>
