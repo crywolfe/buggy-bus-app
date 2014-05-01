@@ -3,6 +3,12 @@ Company.delete_all
 Review.delete_all
 Schedule.delete_all
 
+#Megabus is company_id 1
+# ChinaBus is company_id 2
+# Bolt is company_id 3
+#Greyhound is company 4
+#Peter Pan is company 5
+
 #Create Users --------------------------
 
 taylor_swift = User.create({
@@ -65,9 +71,18 @@ bette_davis = User.create({
   password: "password"
   })
 
+admin = User.create({
+  name: "Admin",
+  email: "admin@admin.com",
+  password: "password",
+  admin: "true"
+  })
+
+
 #Create Reviews --------------------------
 
-@mega_bus_review = Review.create({
+#Megabus
+Review.create({
   post: "Mega Bus more like Mega-lame-o bus, enough said.",
   date: "1/5/2020",
   rating: 1,
@@ -76,7 +91,8 @@ bette_davis = User.create({
   company_id: 1
   })
 
-@china_bus_review = Review.create({
+#Chinabus
+Review.create({
     post: "Chinabus rocks my socks bro.",
     date: "1/5/2030",
     rating: 4,
@@ -85,7 +101,8 @@ bette_davis = User.create({
     company_id: 2
   })
 
-@bolt_bus_review = Review.create({
+#Bolt bus
+Review.create({
   post: "I love Bolt Bussssss!!! But the guy next to me was so weird lolz. ",
   date: "1/5/2010",
   rating: 4,
@@ -94,7 +111,8 @@ bette_davis = User.create({
   company_id: 3
   })
 
-@greyhound_review = Review.create({
+#Greyhound
+Review.create({
   post: "I met my wife on Greyhound, ps she's super hawt",
   date: "1/19/2020",
   rating: 5,
@@ -103,7 +121,8 @@ bette_davis = User.create({
   company_id: 4
   })
 
-@peter_pan_review = Review.create({
+#Peter Pan
+Review.create({
   post: "I lost my v-card to Pieter Pan, don't tell my boyfriend Hansel",
   date: "5/5/3020",
   rating: 3,
@@ -114,58 +133,87 @@ bette_davis = User.create({
 
 #Create Schedules -----------------------------------
 
-@mega_bus_schedules = Schedule.create({
+#Megabus
+Schedule.create({
   departure_date: "5/5/1994",
-  departure_time: "3:52 am",
+  departure_time: "3:00 am",
   departure_location: "NYC",
-  arrival_date: "5/5/2014",
-  arrival_time: "3:53 pm",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:00 pm",
   arrival_location: "Boston",
-  duration: "5h 2m",
+  duration: "3h",
   company_id: 1
   })
 
-@china_bus_schedules = Schedule.create({
+#china bus
+Schedule.create({
   departure_date: "5/5/1994",
-  departure_time: "3:52 am",
+  departure_time: "3:15 am",
   departure_location: "NYC",
-  arrival_date: "5/5/2014",
-  arrival_time: "3:53 pm",
-  arrival_location: "Trenton",
-  duration: "10h 5m",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:45 pm",
+  arrival_location: "Boston",
+  duration: "3h",
   company_id: 2
   })
-
-@bolt_bus_schedules = Schedule.create({
+#bolt bus
+Schedule.create({
   departure_date: "5/5/1994",
-  departure_time: "3:52 am",
+  departure_time: "3:30 am",
   departure_location: "NYC",
-  arrival_date: "5/5/2014",
-  arrival_time: "3:53 pm",
-  arrival_location: "DC",
-  duration: "6h 2m",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:45 pm",
+  arrival_location: "Boston",
+  duration: "3h 15m",
   company_id: 3
   })
 
-@greyhound_schedules = Schedule.create({
+
+#bolt bus
+Schedule.create({
   departure_date: "5/5/1994",
-  departure_time: "3:52 am",
-  departure_location: "DC",
-  arrival_date: "5/5/2014",
-  arrival_time: "3:53 pm",
-  arrival_location: "NYC",
-  duration: "7h 5m",
+  departure_time: "3:55 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:55 pm",
+  arrival_location: "Boston",
+  duration: "3h",
+  company_id: 3
+  })
+
+#bolt bus
+Schedule.create({
+  departure_date: "5/5/1994",
+  departure_time: "6:00 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/1994",
+  arrival_time: "9:00 pm",
+  arrival_location: "Boston",
+  duration: "3h",
+  company_id: 3
+  })
+
+#greyhound
+Schedule.create({
+  departure_date: "5/5/1994",
+  departure_time: "6:00 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/1994",
+  arrival_time: "9:53 pm",
+  arrival_location: "Boston",
+  duration: "3h 53m",
   company_id: 4
   })
 
-@peter_pan_schedules = Schedule.create({
+#Peter Pan
+ Schedule.create({
   departure_date: "5/5/1994",
-  departure_time: "3:52 am",
-  departure_location: "DC",
-  arrival_date: "5/5/2014",
-  arrival_time: "3:53 pm",
-  arrival_location: "Trenton",
-  duration: "9h 4m",
+  departure_time: "6:52 am",
+  departure_location: "NYC",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "Boston",
+  duration: "6h 1m",
   company_id: 5
   })
 
