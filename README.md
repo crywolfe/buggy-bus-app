@@ -9,6 +9,8 @@
 
 ### [Google Spreadsheet](https://drive.google.com/?tab=mo&authuser=0#folders/0B-WKIr3Eehrgc3ItVW51MG9YdFU)
 
+### [ERD](/ERD.pdf)
+
 DIV DIAGRAM IS SHARED ON GOOGLE DRIVE
 
 This README would normally document whatever steps are necessary to get the

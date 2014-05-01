@@ -11,7 +11,7 @@ class GotobusScraper
     @schedules = []
   end
 
-  def make_query(arguments)
+  def make_query(dep_date, from_location, to_location)
 
     ### logic to interpret arugments for
     ### departure and arrival locations
