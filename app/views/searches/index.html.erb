@@ -14,7 +14,7 @@
 
     <div id='login_detail'>
 <!--       <%#= render 'users/form' %>
- -->      
+ -->
 
       <div id='email'>
         <p><%= form_for :user, :url => {:action => "create"} do |f| %>
@@ -42,52 +42,55 @@
         </div>
       </div>
     </header>
-    
+
   <!-- <div class="row" style="margin-top: 90px;"> -->
     <!-- <div class="large-5 columns"> -->
 <!--       <div class="small-6 small-offset-1 columns">
- -->     
+ -->
 
- 
+
     <ul class="small-block-grid-4">
       <li></li>
       <li>
         <div class="panel callout radius">
           <h4>MENU</h4>
-          
+
           <p id='departure_location'>
             <%= form_for :search, :url =>
             {:action => "create"} do |f| %>
             <%= f.label(:departure_location) %>
-            <%= f.select :departure_location, 
+            <%= f.select :departure_location,
               [["Select",""],
-              ['Boston, MA', 'boston'],
-              ['New York, NY', 'nyc'],
-              ['Philadelphia', 'philly'],
-              ['Baltimore, MD', 'baltimore'],
-              ['Washington, DC', 'dc'],
-              ['Richmond, VA', 'richmond'],
-              ['Hampton, VA', 'hampton']]
+              ['Boston, MA', 'Boston'],
+              ['New York, NY', 'New York'],
+              ['Philadelphia, PA', 'Philadelphia'],
+              ['Baltimore, MD', 'Baltimore'],
+              ['Washington, DC', 'Washington'],
+              ['Richmond, VA', 'Richmond'],
+              ['Hampton, VA', 'Hampton']]
             %>
           </p>
 
-          
+
           <p id='arrival_location'>
             <%= f.label(:arrival_location) %>
-            <%= f.select(:arrival_location, 
+            <%= f.select(:arrival_location,
               [["Select",""],
-              ['Boston, MA', 'boston'],
-              ['New York, NY', 'nyc'],
-              ['Philadelphia', 'philly'],
-              ['Baltimore, MD', 'baltimore'],
-              ['Washington, DC', 'dc'],
-              ['Richmond, VA', 'richmond'],
-              ['Hampton, VA', 'hampton']])
+              ['Boston, MA', 'Boston'],
+              ['New York, NY', 'New York'],
+              ['Philadelphia, PA', 'Philadelphia'],
+              ['Baltimore, MD', 'Baltimore'],
+              ['Washington, DC', 'Washington'],
+              ['Richmond, VA', 'Richmond'],
+              ['Hampton, VA', 'Hampton']])
             %>
-          </p>        
-          <p id='departure_time'>
+          </p>
+          <p id='departure_date'>
             <%= f.label(:departure_date) %>
-            <input type="date" name="name" value="name"/>         
+            <%= date_select :search, :departure_date %>
+             <p id='search'>
+            <%= submit_tag("Bada Bus") %>
+          </p>
             <% end %>
             </p>
           <p id='oneway'>
@@ -96,9 +99,7 @@
           <p id='lucky'>
             <%= submit_tag("Lucky Bada Bus") %>
           </p>
-          <p id='search'>
-            <%= submit_tag("Bada Bus") %>
-          </p>
+
         </div> <!-- panel callout radius -->
       </li>
     </ul>  <!-- small-block-grid-3 -->

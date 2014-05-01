@@ -3,6 +3,7 @@ class SearchesController < ApplicationController
   def index
     @searches = Search.all
     @schedules = Schedule.all
+    # @searches = Search.find_by({id: params[:id]})
   end
 
   def show
@@ -24,12 +25,24 @@ class SearchesController < ApplicationController
   end
 
   def create
-    @search = Search.new(search_params)
-    if @search.save
-      redirect_to("/searches/#{@search.id}")
-    else
-      render :new
-    end
+    departure_date = parse_date(search_params)
+    departure_location = search_params['departure_location']
+    arrival_location = search_params['arrival_location']
+    @search = Search.create({
+      departure_location: departure_location,
+      arrival_location: arrival_location,
+      departure_date: departure_date
+      })
+    query_string = "departure_location LIKE ? AND arrival_location LIKE ? AND departure_date LIKE ?"
+    @search_results = Schedule.where(
+      query_string,
+      '%' + departure_location + '%',
+      '%' + arrival_location + '%',
+      '%' + departure_date + '%'
+      )
+    # redirect_to("/searches/#{@search.id}")
+    # binding.pry
+    render json: @search_results
   end
 
   private
