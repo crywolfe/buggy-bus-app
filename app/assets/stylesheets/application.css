@@ -12,6 +12,7 @@
  *
  *= require foundation_and_overrides
  *= require_self
+ *= require panel
  *= require login_detail
  *= require search_results
  */
@@ -111,20 +112,4 @@ MENU
   font-size: 18px;
   color: white;
 
-}
-/*
-================================
-PANEL OVERRIDES
-================================
-*/
-
-.panel.callout {
-  background-color: black;
-  opacity: .8;
-}
-
-.panel.callout.radius {
-  background-color: #661511;
-  opacity: .8;
-  border-radius: 20px;
 }
