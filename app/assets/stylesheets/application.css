@@ -110,7 +110,7 @@ header {
 
 }
 
-#departure_location {
+/*#departure_location {
   position: absolute;
   top: 15%;
   left: 5.5%;
@@ -127,9 +127,9 @@ header {
   width: 100px;
   height: 20px;
   background: #8f8a73;
-}
+}*/
 
-#departure_time {
+/*#departure_time {
   position: absolute;
   top: 15%;
   left: 56%;
@@ -137,8 +137,8 @@ header {
   height: 20px;
   background: #8f8a73;
 
-}
-
+}*/
+/*
 #oneway {
   position: absolute;
   top: 5%;
@@ -158,8 +158,8 @@ header {
   background: #8f8a73;
 
 }
-
-#seasonal_message {
+*/
+/*#seasonal_message {
   position: absolute;
   top: 50%;
   left: 30%;
@@ -187,4 +187,4 @@ header {
   height: 25px;
   background: #8f8a73;
 
-}
+}*/
