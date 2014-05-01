@@ -1,7 +1,6 @@
-# require 'nokogiri'
 require 'time'
 require 'open-uri'
-# require 'pry'
+require 'rack'
 
 class MegabusScraper
 
@@ -11,17 +10,30 @@ class MegabusScraper
     @schedules = []
   end
 
-  def parse
+  def make_query
+
+  end
+
+  def commit_schedules
+    @schedules.each do |route_hash|
+      route_hash.save
+    end
+  end
+
+  def fetch_html
     @doc = Nokogiri::HTML(open(@url))
     @departure_date = Time.parse(@doc.css('.search_params strong')[1].text).strftime("%a, %b %d")
-    @result_tables = @doc.css('ul[class="journey standard none"]')
+    @result_tables  = @doc.css('ul[class="journey standard none"]')
+  end
 
+  def parse
+    self.fetch_html
     @result_tables.each do |entry|
-      # this bunch of gook returns a string of text in the following format
+      # this bunch of shit returns a string of text in the following format
       # "Departs 5:00 AM Washington DC Union Station Arrives 9:40 AM New York NY 7th Ave & 28th St"
       route_string = entry.css('li.two p').text.split(/\s+|,|\./).delete_if {|char| char == '' }.join(' ')
 
-      # this bunch of shit returns the following
+      # this other bunch of shit returns the following
       # [0] "5:00 AM Washington DC Union Station ", ## departure string
       # [1] "9:40 AM New York NY 7th Ave & 28th St" ## arrival string
       route_array = route_string.gsub('&apos;', "'").split(/Departs\s|Arrives\s/).reject(&:empty?)
@@ -29,11 +41,7 @@ class MegabusScraper
       departure_string = route_array[0].strip
       arrival_string = route_array[1].strip
 
-      # this returns just the string of time
-      # as such "5:00 AM"
-      # step3 = step2[0][/\d+:\d+\S[amp]+/i]
-
-      # alternate step2 provides this
+      # this splits the time and address separately as such
       # [0] "9:40 AM",
       # [1] " New York NY 7th Ave & 28th St"
       departure_data_array = departure_string.gsub(/\./, '').partition(/\d+:\d+\S[amp]+/i)
@@ -53,7 +61,7 @@ class MegabusScraper
 
       self.calculate_arrival_date
 
-      @schedules << {
+      @schedules << Schedule.new({
         departure_location: @departure_location,
         departure_date:     @departure_date,
         departure_time:     @departure_time,
@@ -62,9 +70,8 @@ class MegabusScraper
         arrival_date:       @arrival_date,
         company_id:         @company,
         price:              @price
-      }
+      })
     end
-      binding.pry
     return @schedules
   end
 
@@ -80,4 +87,5 @@ class MegabusScraper
       @arrival_date = @departure_date
     end
   end
+
 end
