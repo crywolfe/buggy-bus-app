@@ -207,7 +207,73 @@ Schedule.create({
 
 #Peter Pan
  Schedule.create({
-  departure_date: "Thu, May 08",
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+   Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+   Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
+  departure_time: "8:30 PM",
+  departure_location: "Washington DC Union Station",
+  arrival_date: "5/5/1994",
+  arrival_time: "6:53 pm",
+  arrival_location: "New York NY 7th Ave & 28th St",
+  duration: "6h 1m",
+  company_id: 5
+  })
+
+  Schedule.create({
+  departure_date: "2014/5/1",
   departure_time: "8:30 PM",
   departure_location: "Washington DC Union Station",
   arrival_date: "5/5/1994",

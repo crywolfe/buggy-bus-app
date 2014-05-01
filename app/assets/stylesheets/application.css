@@ -23,6 +23,7 @@ body {
   background-size: 1100px;
   min-height: 300px;
   font-family: 'Comfortaa', 'cursive';
+  text-align: center;
 
 }
 
@@ -111,5 +112,17 @@ MENU
   display: inline-block;
   font-size: 18px;
   color: white;
+}
+
+#search {
+  color:white;
+}
+
+#search_2 {
+  opacity: .8;
+  border-radius: 15px;
+  font-family: 'Comfortaa', 'cursive';
+  z-index: 1;
 
 }
+

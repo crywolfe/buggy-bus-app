@@ -40,15 +40,14 @@ class SearchesController < ApplicationController
       '%' + arrival_location + '%',
       '%' + departure_date + '%'
       )
-    # redirect_to("/searches/#{@search.id}")
-    # binding.pry
     render json: @search_results
+    # binding.pry
+    # render json: @search_results
   end
 
   private
 
   def search_params
-    # binding.pry
     params.require(:search).permit(
     :departure_location,
     :arrival_location,
