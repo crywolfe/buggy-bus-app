@@ -1,0 +1,8 @@
+﻿div.formelement{clear:both; width:100%;}
+div.formelement div.caption{float:left; clear:left;}
+div.form div.formelement div.input{float:left; width:60%;}
+div.formelement div.input input.textbox{width:100%;} 
+div.formelement div.input textarea.textbox{width:100%;}
+div.valid{ visibility: hidden;} 
+div.formelement div.valid{float:left; color:#f00; padding-left:1em; visibility: visible}
+* html div.formelement div.valid {padding-left: 4px;}
