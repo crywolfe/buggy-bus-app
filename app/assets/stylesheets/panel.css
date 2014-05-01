@@ -1,0 +1,23 @@
+/*
+================================
+PANEL OVERRIDES
+================================
+*/
+
+.panel.callout {
+  border-color: black;
+  opacity: .8;
+}
+
+.panel.callout.radius {
+  background-color: #661511;
+  opacity: .8;
+  border-radius: 20px;
+  border-color: black;
+
+}
+
+label {
+  color: white;
+
+}

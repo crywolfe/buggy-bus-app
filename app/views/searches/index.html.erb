@@ -46,50 +46,42 @@
   <!-- <div class="row" style="margin-top: 90px;"> -->
     <!-- <div class="large-5 columns"> -->
 <!--       <div class="small-6 small-offset-1 columns">
- -->        
-    <div class="small-5 small-centered columns">
-      <div class="panel callout radius">
+ -->     
 
-<!--       <div id='main'>  -->         
-        <h4>MENU</h4>
-        
-        <p id='departure_location'>
-          <%= form_for :search, :url =>
-          {:action => "create"} do |f| %>
-          <%= f.label(:departure_location) %>
-          <%= f.text_field(:departure_location) %>
-        </p>
-
-        <p id='arrival_location'>
-          <%= f.label(:arrival_location) %>
-          <%= f.text_field(:arrival_location) %>
-        </p>        
-        <p id='departure_time'>
-          <%= f.label(:departure_date) %>
-          <%= f.text_field(:departure_date) %>
-          <% end %>
-        </p>
-
-        <p id='oneway'>
-          <p>oneway</p>
-        </p>
-       <!--  <p id='roundtrip'>
-          <p>roundtrip</p>
-        </p> -->
-
-        <!-- <p id='seasonal_message'>
-          <p>seasonal message</p>
-        </p> -->
-        <p id='lucky'>
-          <%= submit_tag("Lucky Bada Bus") %>
-        </p>
-        <p id='search'>
-          <%= submit_tag("Bada Bus") %>
-        </p>
-      </div> <!-- 3 columns -->
-    <!-- </div> -->
-    </div>
-    </div> <!-- large 12 column -->
+ 
+    <ul class="small-block-grid-4">
+      <li></li>
+      <li>
+        <div class="panel callout radius">
+          <h4>MENU</h4>
+          
+          <p id='departure_location'>
+            <%= form_for :search, :url =>
+            {:action => "create"} do |f| %>
+            <%= f.label(:departure_location) %>
+            <%= f.text_field(:departure_location) %>
+          </p>
+          <p id='arrival_location'>
+            <%= f.label(:arrival_location) %>
+            <%= f.text_field(:arrival_location) %>
+          </p>        
+          <p id='departure_time'>
+            <%= f.label(:departure_date) %>
+            <%= f.text_field(:departure_date) %>
+            <% end %>
+          </p>
+          <p id='oneway'>
+            <p>oneway</p>
+          </p>
+          <p id='lucky'>
+            <%= submit_tag("Lucky Bada Bus") %>
+          </p>
+          <p id='search'>
+            <%= submit_tag("Bada Bus") %>
+          </p>
+        </div> <!-- panel callout radius -->
+      </li>
+    </ul>  <!-- small-block-grid-3 -->
   </div> <!-- row -->
 
 
