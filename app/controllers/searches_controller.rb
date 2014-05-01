@@ -1,30 +1,46 @@
 class SearchesController < ApplicationController
 
   def index
+    @searches = Search.all
+    @schedules = Schedule.all
   end
 
   def show
-    @search = Search.find_by(id: params[:id])
-    @searches = Search.all
-    binding.pry
-    @schedules = Schedule.where departure_location: "NYC" do |schedule|
-      schedule.each do |details|
-        details.duration
-      end
+    search = Search.find(params["id"])
+     @schedules = Schedule.where(
+      departure_location: "#{search.departure_location}",
+      arrival_location: "#{search.arrival_location}",
+       departure_date: "#{search.departure_date}"
+       )
+
+    # respond_to do |format|
+    #   format.json { render json: @schedules}
+    # end
+    # binding.pry
+  end
+
+  def new
+    @search = Search.new
+  end
+
+  def create
+    @search = Search.new(search_params)
+    if @search.save
+      redirect_to("/searches/#{@search.id}")
+    else
+      render :new
     end
   end
 
-   # def get_schedules
-   #    Schedule.where departure_time: "NYC", arrival_location: "Boston", departure_date: "5/5/1994" do |schedule|
-   #    puts schedule
-   # end
+  private
 
-
-  def search
+  def search_params
+    # binding.pry
+    params.require(:search).permit(
+    :departure_location,
+    :arrival_location,
+    :departure_date
+    )
   end
 
-
 end
-
-
-

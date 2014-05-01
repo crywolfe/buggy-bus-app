@@ -110,7 +110,7 @@ header {
 
 }
 
-#from {
+#departure_location {
   position: absolute;
   top: 15%;
   left: 5.5%;
@@ -120,7 +120,7 @@ header {
 
 }
 
-#to {
+#arrival_location {
   position: absolute;
   top: 15%;
   left: 30%;
@@ -129,7 +129,7 @@ header {
   background: #8f8a73;
 }
 
-#time_leaving {
+#departure_time {
   position: absolute;
   top: 15%;
   left: 56%;
