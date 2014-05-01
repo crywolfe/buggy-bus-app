@@ -54,8 +54,8 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+$primary-color: #661511;
+// $secondary-color: #A7A7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -802,24 +802,24 @@
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color(#111, $lightness: -5%);
+$panel-bg: scale-color(#999, $lightness: -5%);
 $panel-border-style: solid;
 $panel-border-size: 10px;
 
 // We use this % to control how much we darken things on hover
 $panel-function-factor: -11%;
-// $panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
+$panel-border-color: scale-color($panel-bg, $lightness: $panel-function-factor);
 
 // We use these to set default inner padding and bottom margin
 // $panel-margin-bottom: rem-calc(20);
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: #333;
+$panel-font-color: #888;
 // $panel-font-color-alt: #fff;
 
 // $panel-header-adjust: true;
-// $callout-panel-link-color: $primary-color;
+$callout-panel-link-color: $primary-color;
 
 // Pricing Tables
 
