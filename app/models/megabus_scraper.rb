@@ -55,27 +55,26 @@ class MegabusScraper
   def parse
     self.fetch_html
     @result_tables.each do |entry|
-      # this bunch of shit returns a string of text in the following format
+      # Phase 1 of parsing, format returned:
       # "Departs 5:00 AM Washington DC Union Station Arrives 9:40 AM New York NY 7th Ave & 28th St"
       route_string = entry.css('li.two p').text.split(/\s+|,|\./).delete_if {|char| char == '' }.join(' ')
 
-      # this other bunch of shit returns the following
+      # Phase 2 of parsing, format returned:
       # [0] "5:00 AM Washington DC Union Station ", ## departure string
       # [1] "9:40 AM New York NY 7th Ave & 28th St" ## arrival string
       route_array = route_string.gsub('&apos;', "'").split(/Departs\s|Arrives\s/).reject(&:empty?)
-
       departure_string = route_array[0].strip
       arrival_string = route_array[1].strip
 
-      # this splits the time and address separately as such
+      # Phase 3 of parsing, format returned:
       # [0] "9:40 AM",
       # [1] " New York NY 7th Ave & 28th St"
       departure_data_array = departure_string.gsub(/\./, '').partition(/\d+:\d+\S[amp]+/i)
       departure_data_array.delete_at(0)
-
       arrival_data_array = arrival_string.gsub(/\./, '').partition(/\d+:\d+\S[amp]+/i)
       arrival_data_array.delete_at(0)
 
+      # Phase 4 of parsing, assign variables.
       @departure_location = departure_data_array[1].strip
       @departure_time = departure_data_array[0].strip
 

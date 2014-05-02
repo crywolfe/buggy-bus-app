@@ -41,8 +41,6 @@ class SearchesController < ApplicationController
       '%' + departure_date + '%'
       )
     render json: @search_results
-    # binding.pry
-    # render json: @search_results
   end
 
   private
