@@ -1,9 +1,9 @@
 ## BuggyBus App [![Build Status](https://travis-ci.org/crywolfe/buggy-bus-app.svg?branch=develop)](https://travis-ci.org/crywolfe/buggy-bus-app)
 
 ### Built by Team Rocket
-* #### Brian 'Apollo 9' Donegan
-* #### Robert 'Spaaaaaace' White
-* #### Gerald 'The Cosmonaut' Wolfe
+*  Brian 'Apollo 9' Donegan
+*  Robert 'Spaaaaaace' White
+*  Gerald 'The Cosmonaut' Wolfe
 
 ### [On Heroku](http://lit-dusk-8730.herokuapp.com/)
 
