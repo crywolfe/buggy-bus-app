@@ -7,7 +7,7 @@ class MegabusScraper
   attr_accessor :url, :schedules
 
   def initialize
-    @base_url = "http://http://us.megabus.com/JourneyResults.aspx?"
+    @base_url = "http://us.megabus.com/JourneyResults.aspx?"
     @schedules = []
     @city_hash = {
       'philadelphia' => '127',
@@ -21,13 +21,23 @@ class MegabusScraper
   end
 
   def build_query(dep_date, from_city, to_city)
+    temp = dep_date.split('/')
+    dep_date = [temp[1],temp[2],temp[0]].join('/')
     query_string = Rack::Utils.build_query({
       'outboundDepartureDate' => dep_date,
-      'destinationCode'       => city_hash[to_city],
-      'originCode'            => city_hash[from_city],
+      'destinationCode'       => @city_hash[to_city],
+      'originCode'            => @city_hash[from_city],
       'passengerCount'        => '1'
     })
-    return @base_url + query_string
+    @url = @base_url + query_string
+  end
+
+  def company_check
+    if Company.find_by(company_name: @company)
+      @company_id = Company.find_by(company_name: @company, base_url: @base_url).id
+    else
+      @company_id = Company.create(company_name: @company, base_url: @base_url).id
+    end
   end
 
   def commit_schedules
@@ -38,7 +48,7 @@ class MegabusScraper
 
   def fetch_html
     @doc = Nokogiri::HTML(open(@url))
-    @departure_date = Time.parse(@doc.css('.search_params strong')[1].text).strftime("%a, %b %d")
+    @departure_date = Time.parse(@doc.css('.search_params strong')[1].text).strftime("%Y/%-m/%-d")
     @result_tables  = @doc.css('ul[class="journey standard none"]')
   end
 
@@ -75,6 +85,7 @@ class MegabusScraper
       @company = "Megabus"
       @price = entry.css('li.five p').text[/\$\d+\.\d{2}/]
 
+      self.company_check
       self.calculate_arrival_date
 
       @schedules << Schedule.new({
@@ -84,11 +95,11 @@ class MegabusScraper
         arrival_location:   @arrival_location,
         arrival_time:       @arrival_time,
         arrival_date:       @arrival_date,
-        company_id:         @company,
+        company_id:         @company_id,
         price:              @price
       })
     end
-    binding.pry
+    # binding.pry
     return @schedules
   end
 
@@ -98,10 +109,10 @@ class MegabusScraper
     departure_hour = Time.parse(@departure_time).hour
     arrival_hour   = Time.parse(@arrival_time).hour
     if arrival_hour < departure_hour
-      next_day      = (Time.parse(@departure_date) + 86400).strftime("%a, %b %d")
+      next_day      = (Time.parse(@departure_date) + 86400).strftime("%Y/%-m/%-d")
       @arrival_date = next_day
     elsif
-      @arrival_date = @departure_date
+      @arrival_date = Time.parse(@departure_date).strftime("%Y/%-m/%-d")
     end
   end
 

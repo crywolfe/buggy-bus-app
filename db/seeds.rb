@@ -3,312 +3,339 @@ Company.delete_all
 Review.delete_all
 Schedule.delete_all
 
-#Megabus is company_id 1
-# ChinaBus is company_id 2
-# Bolt is company_id 3
-#Greyhound is company 4
-#Peter Pan is company 5
+cities = ['philadelphia', 'washington', 'baltimore', 'new york', 'richmond', 'hampton', 'boston']
 
-#Create Users --------------------------
+i = 0
+day = Time.now.strftime("%Y/%-m/%-d")
+while i < 9 do
 
-taylor_swift = User.create({
-  name: "Taylor Swift",
-  email: "taylor@swift.com",
-  password: "password"
-  })
+  mega = MegabusScraper.new
+  goto = GotobusScraper.new
 
-j_edgar = User.create({
-  name: "J Edgar Hoover",
-  email: "j@hoover.com",
-  password: "password"
-  })
+  cities.each do |city|
+    mega.build_query(day, 'new york', city)
+    mega.parse
+    mega.commit_schedules
 
-iggy_azalea = User.create({
-  name: "Iggy Azalea",
-  email: "iggy@azalea.com",
-  password: "password"
-  })
+    goto.build_query(day, 'new york', city)
+    goto.parse
+    goto.commit_schedules
 
-cody_banks = User.create({
-  name: "Agent Cody Banks",
-  email: "cody@banks.com",
-  password: "password"
-  })
+    # binding.pry
 
-harrison_ford = User.create({
-  name: "Harrison Ford",
-  email: "harrison@ford.com",
-  password: "password"
-  })
+  end
 
-steve_mcqueen = User.create({
-  name: "Steve McQueen",
-  email: "steve@mcqueen.com",
-  password: "password"
-  })
+  day = day.next
+  i += 1
+  # binding.pry
+end
 
-tanya_harding = User.create({
-  name: "Tanya Harding",
-  email: "tanya@harding.com",
-  password: "password"
-  })
+# # Megabus is company_id 1
+# # ChinaBus is company_id 2
+# # Bolt is company_id 3
+# # Greyhound is company 4
+# # Peter Pan is company 5
 
-dave_chapelle = User.create({
-  name: "Dave Chapelle",
-  email: "dave@chapelle.com",
-  password: "password"
-  })
+# #Create Users --------------------------
 
-general_tso = User.create({
-  name: "General Tso",
-  email: "general@tso.com",
-  password: "password"
-  })
+# taylor_swift = User.create({
+#   name: "Taylor Swift",
+#   email: "taylor@swift.com",
+#   password: "password"
+#   })
 
-bette_davis = User.create({
-  name: "Bette Davis",
-  email: "bette@davis.com",
-  password: "password"
-  })
+# j_edgar = User.create({
+#   name: "J Edgar Hoover",
+#   email: "j@hoover.com",
+#   password: "password"
+#   })
 
-admin = User.create({
-  name: "Admin",
-  email: "admin@admin.com",
-  password: "password",
-  admin: "true"
-  })
+# iggy_azalea = User.create({
+#   name: "Iggy Azalea",
+#   email: "iggy@azalea.com",
+#   password: "password"
+#   })
 
+# cody_banks = User.create({
+#   name: "Agent Cody Banks",
+#   email: "cody@banks.com",
+#   password: "password"
+#   })
 
-#Create Reviews --------------------------
+# harrison_ford = User.create({
+#   name: "Harrison Ford",
+#   email: "harrison@ford.com",
+#   password: "password"
+#   })
 
-#Megabus
-Review.create({
-  post: "Mega Bus more like Mega-lame-o bus, enough said.",
-  date: "1/5/2020",
-  rating: 1,
-  like: 0,
-  user_id: 1,
-  company_id: 1
-  })
+# steve_mcqueen = User.create({
+#   name: "Steve McQueen",
+#   email: "steve@mcqueen.com",
+#   password: "password"
+#   })
 
-#Chinabus
-Review.create({
-    post: "Chinabus rocks my socks bro.",
-    date: "1/5/2030",
-    rating: 4,
-    like: 3,
-    user_id: 2,
-    company_id: 2
-  })
+# tanya_harding = User.create({
+#   name: "Tanya Harding",
+#   email: "tanya@harding.com",
+#   password: "password"
+#   })
 
-#Bolt bus
-Review.create({
-  post: "I love Bolt Bussssss!!! But the guy next to me was so weird lolz. ",
-  date: "1/5/2010",
-  rating: 4,
-  like: 6,
-  user_id: 3,
-  company_id: 3
-  })
+# dave_chapelle = User.create({
+#   name: "Dave Chapelle",
+#   email: "dave@chapelle.com",
+#   password: "password"
+#   })
 
-#Greyhound
-Review.create({
-  post: "I met my wife on Greyhound, ps she's super hawt",
-  date: "1/19/2020",
-  rating: 5,
-  like: 4,
-  user_id: 4,
-  company_id: 4
-  })
+# general_tso = User.create({
+#   name: "General Tso",
+#   email: "general@tso.com",
+#   password: "password"
+#   })
 
-#Peter Pan
-Review.create({
-  post: "I lost my v-card to Pieter Pan, don't tell my boyfriend Hansel",
-  date: "5/5/3020",
-  rating: 3,
-  like: 96,
-  user_id: 5,
-  company_id: 5
-  })
+# bette_davis = User.create({
+#   name: "Bette Davis",
+#   email: "bette@davis.com",
+#   password: "password"
+#   })
 
-#Create Schedules -----------------------------------
-
-#Megabus
-Schedule.create({
-  departure_date: "01/01/1994",
-  departure_time: "3:00 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:00 pm",
-  arrival_location: "Boston",
-  duration: "3h",
-  company_id: 1
-  })
-
-#china bus
-Schedule.create({
-  departure_date: "05/05/1994",
-  departure_time: "3:15 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:45 pm",
-  arrival_location: "Boston",
-  duration: "3h",
-  company_id: 2
-  })
-#bolt bus
-Schedule.create({
-  departure_date: "05/05/1994",
-  departure_time: "3:30 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:45 pm",
-  arrival_location: "Hampton",
-  duration: "3h 15m",
-  company_id: 3
-  })
+# admin = User.create({
+#   name: "Admin",
+#   email: "admin@admin.com",
+#   password: "password",
+#   admin: "true"
+#   })
 
 
-#bolt bus
-Schedule.create({
-  departure_date: "05/05/1994",
-  departure_time: "3:55 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:55 pm",
-  arrival_location: "Richmond",
-  duration: "3h",
-  company_id: 3
-  })
+# #Create Reviews --------------------------
 
-#bolt bus
-Schedule.create({
-  departure_date: "05/05/1994",
-  departure_time: "6:00 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "9:00 pm",
-  arrival_location: "Baltimore",
-  duration: "3h",
-  company_id: 3
-  })
+# #Megabus
+# Review.create({
+#   post: "Mega Bus more like Mega-lame-o bus, enough said.",
+#   date: "1/5/2020",
+#   rating: 1,
+#   like: 0,
+#   user_id: 1,
+#   company_id: 1
+#   })
 
-#greyhound
-Schedule.create({
-  departure_date: "05/05/1994",
-  departure_time: "6:00 am",
-  departure_location: "NYC",
-  arrival_date: "5/5/1994",
-  arrival_time: "9:53 pm",
-  arrival_location: "Philadelphia",
-  duration: "3h 53m",
-  company_id: 4
-  })
+# #Chinabus
+# Review.create({
+#     post: "Chinabus rocks my socks bro.",
+#     date: "1/5/2030",
+#     rating: 4,
+#     like: 3,
+#     user_id: 2,
+#     company_id: 2
+#   })
 
-#Peter Pan
- Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #Bolt bus
+# Review.create({
+#   post: "I love Bolt Bussssss!!! But the guy next to me was so weird lolz. ",
+#   date: "1/5/2010",
+#   rating: 4,
+#   like: 6,
+#   user_id: 3,
+#   company_id: 3
+#   })
 
-   Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #Greyhound
+# Review.create({
+#   post: "I met my wife on Greyhound, ps she's super hawt",
+#   date: "1/19/2020",
+#   rating: 5,
+#   like: 4,
+#   user_id: 4,
+#   company_id: 4
+#   })
 
-   Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #Peter Pan
+# Review.create({
+#   post: "I lost my v-card to Pieter Pan, don't tell my boyfriend Hansel",
+#   date: "5/5/3020",
+#   rating: 3,
+#   like: 96,
+#   user_id: 5,
+#   company_id: 5
+#   })
 
-  Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #Create Schedules -----------------------------------
 
-  Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #Megabus
+# Schedule.create({
+#   departure_date: "01/01/1994",
+#   departure_time: "3:00 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:00 pm",
+#   arrival_location: "Boston",
+#   duration: "3h",
+#   company_id: 1
+#   })
 
-  Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
-
-  Schedule.create({
-  departure_date: "2014/5/1",
-  departure_time: "8:30 PM",
-  departure_location: "Washington DC Union Station",
-  arrival_date: "5/5/1994",
-  arrival_time: "6:53 pm",
-  arrival_location: "New York NY 7th Ave & 28th St",
-  duration: "6h 1m",
-  company_id: 5
-  })
+# #china bus
+# Schedule.create({
+#   departure_date: "05/05/1994",
+#   departure_time: "3:15 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:45 pm",
+#   arrival_location: "Boston",
+#   duration: "3h",
+#   company_id: 2
+#   })
+# #bolt bus
+# Schedule.create({
+#   departure_date: "05/05/1994",
+#   departure_time: "3:30 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:45 pm",
+#   arrival_location: "Hampton",
+#   duration: "3h 15m",
+#   company_id: 3
+#   })
 
 
-#Create Companies --------------------
+# #bolt bus
+# Schedule.create({
+#   departure_date: "05/05/1994",
+#   departure_time: "3:55 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:55 pm",
+#   arrival_location: "Richmond",
+#   duration: "3h",
+#   company_id: 3
+#   })
 
-mega_bus = Company.create({
-  company_name: "Mega Bus",
-  base_url: "https://us.megabus.com/Default.aspx",
-  })
+# #bolt bus
+# Schedule.create({
+#   departure_date: "05/05/1994",
+#   departure_time: "6:00 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "9:00 pm",
+#   arrival_location: "Baltimore",
+#   duration: "3h",
+#   company_id: 3
+#   })
 
-china_bus = Company.create({
-  company_name: "China Bus",
-  base_url: "http://www.gotobus.com/bus-tickets/",
-  })
+# #greyhound
+# Schedule.create({
+#   departure_date: "05/05/1994",
+#   departure_time: "6:00 am",
+#   departure_location: "NYC",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "9:53 pm",
+#   arrival_location: "Philadelphia",
+#   duration: "3h 53m",
+#   company_id: 4
+#   })
 
-bolt_bus = Company.create({
-  company_name: "Bolt Bus",
-  base_url: "https://www.boltbus.com/",
-  })
+# #Peter Pan
+#  Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
 
-greyhound = Company.create({
-  company_name: "Greyhound",
-  base_url: "https://www.greyhound.com/",
-  })
+#    Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
 
-peter_pan = Company.create({
-  company_name: "Peter Pan",
-  base_url: "http://peterpanbus.com/",
-  })
+#    Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
+
+#   Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
+
+#   Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
+
+#   Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
+
+#   Schedule.create({
+#   departure_date: "2014/5/1",
+#   departure_time: "8:30 PM",
+#   departure_location: "Washington DC Union Station",
+#   arrival_date: "5/5/1994",
+#   arrival_time: "6:53 pm",
+#   arrival_location: "New York NY 7th Ave & 28th St",
+#   duration: "6h 1m",
+#   company_id: 5
+#   })
+
+
+# #Create Companies --------------------
+
+# mega_bus = Company.create({
+#   company_name: "Mega Bus",
+#   base_url: "https://us.megabus.com/Default.aspx",
+#   })
+
+# china_bus = Company.create({
+#   company_name: "China Bus",
+#   base_url: "http://www.gotobus.com/bus-tickets/",
+#   })
+
+# bolt_bus = Company.create({
+#   company_name: "Bolt Bus",
+#   base_url: "https://www.boltbus.com/",
+#   })
+
+# greyhound = Company.create({
+#   company_name: "Greyhound",
+#   base_url: "https://www.greyhound.com/",
+#   })
+
+# peter_pan = Company.create({
+#   company_name: "Peter Pan",
+#   base_url: "http://peterpanbus.com/",
+#   })
 
 

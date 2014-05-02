@@ -15,9 +15,9 @@ describe GotobusScraper do
     it "translates provided dates into correct query format" do
       url = 'spec/test_sources/apostrophe_test.html'
       scraper.url = url
-      query = scraper.build_query('04/30/2014', 'washington', 'baltimore')
-      actual_query = "http://search.gotobus.com/search/bus.do?is_roundtrip=0&bus_from=Wilmington%2C+DE&bus_to=Baltimore%2C+MD&filter_date=2014-04-30"
-      expect(query).to be actual_query
+      query = scraper.build_query('2014/04/30', 'washington', 'baltimore')
+      actual_query = "http://search.gotobus.com/search/bus.do?is_roundtrip=0&bus_from=Washington%2C+DC&bus_to=Baltimore%2C+MD&filter_date=2014-04-30"
+      expect(query).to eq actual_query
     end
   end
 end
