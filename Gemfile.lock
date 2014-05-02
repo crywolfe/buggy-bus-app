@@ -241,6 +241,7 @@ DEPENDENCIES
   jasmine
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   pg
   pry-rails
   rails (= 4.1.0)

@@ -17,6 +17,8 @@ group :development, :test do
   gem 'simplecov', '~> 0.7.1', require: false
 end
 
+gem 'nokogiri'
+
 # rails_12factor to work with heroku
 gem 'rails_12factor'
 

@@ -1,3 +1,5 @@
+require 'nokogiri'
+
 User.delete_all
 Company.delete_all
 Review.delete_all
