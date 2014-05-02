@@ -19,7 +19,7 @@
 
 body {
   background-color: #661511;
-  background: url('buggybus_background.jpg') center no-repeat #661511; /* add a fallback color of #d6d6d6 */
+  background: url('buggybus_background.jpg') center repeat-y #661511; /* add a fallback color of #d6d6d6 */
   background-size: 1100px;
   min-height: 300px;
   font-family: 'Comfortaa', 'cursive';
@@ -121,7 +121,6 @@ MENU
   border-radius: 15px;
   font-family: 'Comfortaa', 'cursive';
   z-index: 1;
-
 }
 
 img:hover {
@@ -129,18 +128,17 @@ img:hover {
 
 }
 
-
 li:nth-child(odd) {
   color: white;
   background: #661511;
-  opacity: .8;
+  opacity: .7;
   height: 2.3em;
   vertical-align: middle;
 }
 li:nth-child(even) {
   color: white;
   background: #111111;
-  opacity: .8;
+  opacity: .7;
   height: 2.3em;
   vertical-align: middle;
 
