@@ -52,14 +52,20 @@
           console.log(data);
         }
         }).done(function(response) {
+          debugger;
+          var first_rowTag = $("<li class='results_header'>");
+          first_rowTag.appendTo("body");
+          first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
+          first_rowTag.html(first_row);
+          for (var i = 0; i < 5; i++) {
+            var rowTag = $("<li class='results'>");
+            each_row = departure_location + " " + arrival_location + " " + departure_date;
+            rowTag.html(each_row);
+            rowTag.appendTo("body");
 
-          var rowTag = $("<div class='results'>");
-          rowTag.html("row of information");
-          rowTag.appendTo("body");
-
+          }
 
           // render results dynamically
-
 
         });
     });
