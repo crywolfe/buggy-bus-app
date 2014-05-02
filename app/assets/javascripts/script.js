@@ -14,7 +14,8 @@
     });
 
     // 3. CLICK BADA BUS SEARCH
-    $( "#search" ).click(function () {
+    $( "form" ).on('submit', function(event) {
+      event.preventDefault();
       $( ".small-block-grid-4" ).slideUp( 300, function() {
       });
       var buttonTag = $("<button id='search_2'>");
@@ -26,6 +27,37 @@
         });
       });
 
+      var year = $("#search_departure_date_1i").val();
+      var month = $("#search_departure_date_2i").val();
+      var day = $("#search_departure_date_3i").val();
+
+
+      var departure_date = year + "/" + month + "/" + day;
+
+      var departure_location = $("#search_departure_location").val();
+      var arrival_location = $("#search_arrival_location").val();
+      var data_hash = {
+        departure_date: departure_date,
+        departure_location: departure_location,
+        arrival_location: arrival_location
+      }
+      $.ajax({
+        type: 'POST',
+        url: '/searches',
+        dataType: 'json',
+        data: data_hash,
+        success: function(data) {
+            console.log(data);
+        },
+        error: function(data) {
+          console.log("failure");
+          console.log(data);
+        }
+        }).done(function(response) {
+
+          alert("responded");
+
+        });
     });
 
     // 4. CLICK BADA BUS SEARCH

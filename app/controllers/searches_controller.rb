@@ -40,19 +40,22 @@ class SearchesController < ApplicationController
       '%' + arrival_location + '%',
       '%' + departure_date + '%'
       )
-    render json: @search_results
-    # binding.pry
-    # render json: @search_results
+    
+    # respond_to do |format|
+    #   format.html
+
+      # format.json do
+        render json: @search_results
+    #   end
+    # end
+
   end
 
   private
 
-  def search_params
-    params.require(:search).permit(
-    :departure_location,
-    :arrival_location,
-    :departure_date
-    )
-  end
+    def search_params
+      binding.pry
+      params.require(:search).permit("departure_location", "arrival_location", "departure_date")
+    end
 
 end

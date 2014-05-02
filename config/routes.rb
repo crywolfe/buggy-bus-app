@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :searches
 
+  post "/" => "searches#create"
   # resources :buggy_buses
 
 

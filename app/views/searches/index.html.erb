@@ -51,7 +51,7 @@
         <div class="panel callout radius">
           <h4>MENU</h4>
 
-          <p id='departure_location'>
+          <p>
             <%= form_for :search, :url =>
             {:action => "create"} do |f| %>
             <%= f.label(:departure_location) %>
@@ -68,7 +68,7 @@
           </p>
 
 
-          <p id='arrival_location'>
+          <p>
             <%= f.label(:arrival_location) %>
             <%= f.select(:arrival_location,
               [["Select",""],
@@ -81,18 +81,18 @@
               ['Hampton, VA', 'Hampton']])
             %>
           </p>
-          <p id='departure_date'>
-            <%= f.label(:departure_date) %>
-            <%= date_select :search, :departure_date %>
-             <p id='search'>
-            <%= submit_tag("Bada Bus") %>
-          </p>
-            <% end %>
+            <p>
+              <%= f.label(:departure_date) %>
+              <%= date_select :search, :departure_date %>
+            <p>
+              <%= submit_tag("Bada Bus") %>
+            </p>
+              <% end %>
             </p>
           <!-- <p id='oneway'>
             <p>oneway</p>
           </p> -->
-          <p id='lucky'>
+          <p>
             <%= submit_tag("Lucky Bada Bus") %>
           </p>
 
@@ -100,9 +100,10 @@
       </li>
     </ul>  <!-- small-block-grid-3 -->
   </div> <!-- row -->
-<img src="assets/bear.jpg" alt="" usemap="#mapper" border=0 />
+
+<!-- <img src="assets/bear.jpg" width="30" height="50" id="hidden-image" alt="bear" usemap="#mapper" border=0 />
 <map name="mapper">
-  <area shape="circle" coords="0,0,100" href="http://www.google.com"/>
+  <area shape="circle" coords="0,0,100" href="http://www.google.com"/> -->
 
 
 </body>
