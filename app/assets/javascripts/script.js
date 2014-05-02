@@ -21,6 +21,7 @@
       var buttonTag = $("<button id='search_2'>");
       buttonTag.text("BADA BUS");
       buttonTag.appendTo("body");
+    
       $( "#search_2" ).click( function() {
         $( ".small-block-grid-4" ).slideDown( 350, function() {
           $("#search_2").remove();
@@ -52,18 +53,31 @@
           console.log(data);
         }
         }).done(function(response) {
-          debugger;
+          // debugger;
           var first_rowTag = $("<li class='results_header'>");
           first_rowTag.appendTo("body");
           first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
           first_rowTag.html(first_row);
-          for (var i = 0; i < 5; i++) {
-            var rowTag = $("<li class='results'>");
-            each_row = departure_location + " " + arrival_location + " " + departure_date;
-            rowTag.html(each_row);
-            rowTag.appendTo("body");
 
-          }
+
+            $.each(response, function(i,e) {
+              var rowTag = $("<li class='results'>");
+              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location); 
+              rowTag.appendTo("body");
+            });
+
+          
+          $( "#search_2" ).click( function() {
+              $(".results").remove();
+              $(".results_header").remove();
+              
+
+              // $( "#search_2" ).click( function() {
+              //   $( ".small-block-grid-4" ).slideDown( 350, function() {
+              //     $("#search_2").remove();
+              //   });
+              // });
+          });
 
           // render results dynamically
 
