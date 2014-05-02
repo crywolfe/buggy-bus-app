@@ -25,14 +25,10 @@ class SearchesController < ApplicationController
   end
 
   def create
-    departure_date = parse_date(search_params)
+    departure_date = params['search']['departure_date']
     departure_location = search_params['departure_location']
     arrival_location = search_params['arrival_location']
-    @search = Search.create({
-      departure_location: departure_location,
-      arrival_location: arrival_location,
-      departure_date: departure_date
-      })
+    @search = Search.create(search_params)
     query_string = "departure_location LIKE ? AND arrival_location LIKE ? AND departure_date LIKE ?"
     @search_results = Schedule.where(
       query_string,
@@ -41,20 +37,19 @@ class SearchesController < ApplicationController
       '%' + departure_date + '%'
       )
     
-    # respond_to do |format|
-    #   format.html
+    respond_to do |format|
+      format.html
 
-      # format.json do
+      format.json {
         render json: @search_results
-    #   end
-    # end
+      }
+    end
 
   end
 
   private
 
     def search_params
-      binding.pry
       params.require(:search).permit("departure_location", "arrival_location", "departure_date")
     end
 

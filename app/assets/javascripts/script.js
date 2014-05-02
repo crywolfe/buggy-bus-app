@@ -36,25 +36,30 @@
       var departure_location = $("#search_departure_location").val();
       var arrival_location = $("#search_arrival_location").val();
       var data_hash = {
-        departure_date: departure_date,
-        departure_location: departure_location,
-        arrival_location: arrival_location
-      }
+        search: {
+          departure_date: departure_date,
+          departure_location: departure_location,
+          arrival_location: arrival_location
+          }
+        }
       $.ajax({
         type: 'POST',
         url: '/',
         dataType: 'json',
         data: data_hash,
-        success: function(data) {
-            console.log(data);
-        },
         error: function(data) {
           console.log("failure");
           console.log(data);
         }
         }).done(function(response) {
 
-          alert("responded");
+          var rowTag = $("<div class='results'>");
+          rowTag.html("row of information");
+          rowTag.appendTo("body");
+
+
+          // render results dynamically
+
 
         });
     });
