@@ -31,7 +31,6 @@
       var month = $("#search_departure_date_2i").val();
       var day = $("#search_departure_date_3i").val();
 
-
       var departure_date = year + "/" + month + "/" + day;
 
       var departure_location = $("#search_departure_location").val();
@@ -43,7 +42,7 @@
       }
       $.ajax({
         type: 'POST',
-        url: '/searches',
+        url: '/',
         dataType: 'json',
         data: data_hash,
         success: function(data) {
