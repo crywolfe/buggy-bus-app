@@ -7,7 +7,7 @@ cities = ['philadelphia', 'washington', 'baltimore', 'new york', 'richmond', 'ha
 
 i = 0
 day = Time.now.strftime("%Y/%-m/%-d")
-while i < 9 do
+while i < 6 do
 
   mega = MegabusScraper.new
   goto = GotobusScraper.new
@@ -21,13 +21,10 @@ while i < 9 do
     goto.parse
     goto.commit_schedules
 
-    # binding.pry
-
   end
 
   day = day.next
   i += 1
-  # binding.pry
 end
 
 # # Megabus is company_id 1
