@@ -1,9 +1,10 @@
-var results_template;
+var results_template, templateData;
 
 $( document ).ready(function() {
   // EVENT HANDLER
+  var search_result_template = $('#results-template').html()
 
-
+  results_template = _.template(search_result_template)
 
   // 1. CLICK BADA BUS SEARCH
   $( "form" ).on('submit', function(event) {
@@ -45,11 +46,24 @@ $( document ).ready(function() {
         first_rowTag.html(first_row);
 
           $.each(response, function(i,e) {
+
+            templateData = {
+              company_name: e.company_name,
+              price: e.price,
+              link: e.link,
+              departure_date: e.departure_date,
+              departure_location: e.departure_location,
+              departure_time: e.departure_time,
+              arrival_location: e.arrival_location,
+              arrival_date: e.arrival_date,
+              arrival_time: e.arrival_time
+            }
             debugger;
+            $('body').append(results_template(templateData));
 
             console.log(e)
 
-            $('body').append('<div>' + e.departure_date + '</div>')
+            // $('body').append('<div>' + e.departure_date + '</div>')
 
             // var resultsTag = $("<div class='results'>");
             // resultsTag.appendTo("body");
