@@ -1,11 +1,5 @@
 class SearchesController < ApplicationController
 
-  def index
-    @searches = Search.all
-    @schedules = Schedule.all
-    # @searches = Search.find_by({id: params[:id]})
-  end
-
   def show
     search = Search.find(params["id"])
      @schedules = Schedule.where(
@@ -21,7 +15,7 @@ class SearchesController < ApplicationController
   end
 
   def new
-    @search = Search.new
+    render(:index)
   end
 
   def create
@@ -36,7 +30,7 @@ class SearchesController < ApplicationController
       '%' + arrival_location + '%',
       '%' + departure_date + '%'
       )
-    
+
     respond_to do |format|
       format.html
 

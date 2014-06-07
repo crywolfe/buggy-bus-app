@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
 
-  root 'searches#index'
+  root 'searches#new'
 
-  resources :searches
-
-  post "/" => "searches#create"
-  # resources :buggy_buses
-
+  resources :searches, only: [:show, :create]
 
 end
