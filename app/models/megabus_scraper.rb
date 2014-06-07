@@ -84,7 +84,6 @@ class MegabusScraper
       @company = "Megabus"
       @price = entry.css('li.five p').text[/\$\d+\.\d{2}/]
 
-      self.company_check
       self.calculate_arrival_date
 
       @schedules << Schedule.new({
@@ -94,8 +93,9 @@ class MegabusScraper
         arrival_location:   @arrival_location,
         arrival_time:       @arrival_time,
         arrival_date:       @arrival_date,
-        company_id:         @company_id,
-        price:              @price
+        company_name:       @company,
+        price:              @price,
+        link:               @url
       })
     end
     # binding.pry

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501144351) do
+ActiveRecord::Schema.define(version: 20140501142834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,24 +26,6 @@ ActiveRecord::Schema.define(version: 20140501144351) do
     t.string "hampton"
   end
 
-  create_table "companies", force: true do |t|
-    t.string   "company_name"
-    t.string   "base_url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "reviews", force: true do |t|
-    t.string   "post"
-    t.string   "date"
-    t.integer  "rating"
-    t.integer  "like"
-    t.integer  "user_id"
-    t.integer  "company_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "schedules", force: true do |t|
     t.string   "departure_date"
     t.string   "departure_time"
@@ -53,28 +35,17 @@ ActiveRecord::Schema.define(version: 20140501144351) do
     t.string   "arrival_location"
     t.string   "duration"
     t.string   "price"
-    t.integer  "company_id"
+    t.string   "company_name"
+    t.string   "link"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "city_id"
   end
-
-  add_index "schedules", ["city_id"], name: "index_schedules_on_city_id", using: :btree
 
   create_table "searches", force: true do |t|
     t.string   "departure_date"
     t.string   "departure_location"
     t.string   "arrival_location"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.boolean  "admin",           default: false
-    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

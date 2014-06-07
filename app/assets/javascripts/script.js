@@ -50,7 +50,7 @@
 
             $.each(response, function(i,e) {
               var rowTag = $("<li class='results'>");
-              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location);
+              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location + " " + e.company_name);
               rowTag.appendTo("body");
             });
 
