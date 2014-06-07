@@ -113,7 +113,7 @@ img:hover {
 
 li:nth-child(odd) {
   color: white;
-  background: #661511;
+  background: #040404;
   opacity: .7;
   height: 2.3em;
   vertical-align: middle;
@@ -139,5 +139,16 @@ li:nth-child(even) {
 .results {
   color: white;
   background: #111111;
-  opacity: .7;
+  opacity: .9;
+  text-align: left;
+  line-height: 2.3em;
+  margin: 2px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: red;
 }
