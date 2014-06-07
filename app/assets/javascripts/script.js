@@ -1,6 +1,7 @@
+var results_template;
+
 $( document ).ready(function() {
   // EVENT HANDLER
-
 
   // 1. CLICK BADA BUS SEARCH
   $( "form" ).on('submit', function(event) {
