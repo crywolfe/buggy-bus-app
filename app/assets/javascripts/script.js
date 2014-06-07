@@ -49,7 +49,6 @@
 
             $.each(response, function(i,e) {
 
-
               var resultsTag = $("<div class='results'>");
               resultsTag.appendTo("body");
               var companyPriceRowTag = $("<div class='row'>");
@@ -88,7 +87,6 @@
               small83Tag.appendTo(".row");
 
             });
-
 
           $( "#search_2" ).click( function() {
               $(".results").remove();

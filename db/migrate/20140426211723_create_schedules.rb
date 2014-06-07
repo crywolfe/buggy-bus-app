@@ -10,7 +10,8 @@ class CreateSchedules < ActiveRecord::Migration
       t.string :departure_location
       t.string :duration
       t.string :price
-      t.references :company
+      t.string :company_name
+      t.string :link
       t.timestamps
     end
   end
