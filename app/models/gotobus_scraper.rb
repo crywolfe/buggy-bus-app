@@ -52,7 +52,6 @@ class GotobusScraper
       self.get_arrival(entry)
       self.get_price(entry)
       self.get_company(entry)
-      self.company_check
       self.calculate_arrival_date
 
       @schedules << Schedule.new({
@@ -62,8 +61,9 @@ class GotobusScraper
         arrival_location:   @arrival_location,
         arrival_time:       @arrival_time,
         arrival_date:       @arrival_date,
-        company_id:         @company_id,
-        price:              @price
+        company_name:       @company,
+        price:              @price,
+        link:               @url
       })
     end
     return @schedules

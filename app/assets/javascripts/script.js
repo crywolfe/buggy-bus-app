@@ -1,4 +1,5 @@
-  $( document ).ready(function() {
+debugger;
+$( document ).ready(function() {
     // EVENT HANDLER
 
     // 1. CLICK BADA BUS SEARCH
@@ -41,6 +42,7 @@
           console.log(data);
         }
         }).done(function(response) {
+          debugger;
           var first_rowTag = $("<li class='results_header'>");
           first_rowTag.appendTo("body");
           first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
@@ -48,7 +50,7 @@
 
 
             $.each(response, function(i,e) {
-
+              debugger;
 
               var resultsTag = $("<div class='results'>");
               resultsTag.appendTo("body");
