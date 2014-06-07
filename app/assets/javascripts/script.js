@@ -21,7 +21,7 @@
       var buttonTag = $("<button id='search_2'>");
       buttonTag.text("BADA BUS");
       buttonTag.appendTo("body");
-    
+
       $( "#search_2" ).click( function() {
         $( ".small-block-grid-4" ).slideDown( 350, function() {
           $("#search_2").remove();
@@ -45,7 +45,7 @@
         }
       $.ajax({
         type: 'POST',
-        url: '/',
+        url: '/searches',
         dataType: 'json',
         data: data_hash,
         error: function(data) {
@@ -62,15 +62,15 @@
 
             $.each(response, function(i,e) {
               var rowTag = $("<li class='results'>");
-              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location); 
+              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location);
               rowTag.appendTo("body");
             });
 
-          
+
           $( "#search_2" ).click( function() {
               $(".results").remove();
               $(".results_header").remove();
-              
+
 
               // $( "#search_2" ).click( function() {
               //   $( ".small-block-grid-4" ).slideDown( 350, function() {
@@ -94,9 +94,3 @@
     });
 
   });
-
-
-
-
-
-

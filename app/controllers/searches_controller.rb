@@ -22,14 +22,12 @@ class SearchesController < ApplicationController
     departure_date = params['search']['departure_date']
     departure_location = search_params['departure_location']
     arrival_location = search_params['arrival_location']
-    @search = Search.create(search_params)
+
+    # @search = Search.create(search_params)
+
     query_string = "departure_location LIKE ? AND arrival_location LIKE ? AND departure_date LIKE ?"
-    @search_results = Schedule.where(
-      query_string,
-      '%' + departure_location + '%',
-      '%' + arrival_location + '%',
-      '%' + departure_date + '%'
-      )
+
+    @search_results = Search.collect(deparature_date, departure_location, arrival_location)
 
     respond_to do |format|
       format.html
