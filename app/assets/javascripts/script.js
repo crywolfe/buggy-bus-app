@@ -1,6 +1,7 @@
 $( document ).ready(function() {
   // EVENT HANDLER
 
+
   // 1. CLICK BADA BUS SEARCH
   $( "form" ).on('submit', function(event) {
     event.preventDefault();
@@ -35,17 +36,13 @@ $( document ).ready(function() {
         console.log(data);
       }
       }).done(function(response) {
-        var first_rowTag = $("<li class='results_header'>");
-        first_rowTag.appendTo("body");
-        first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
-        first_rowTag.html(first_row);
 
           $.each(response, function(i,e) {
             debugger;
 
             console.log(e)
 
-            $('body').append('<div>' + e.departure_date + '</div>')
+            $('body').append('<div>' + e.departure_date + '</div>');
 
             // var resultsTag = $("<div class='results'>");
             // resultsTag.appendTo("body");
