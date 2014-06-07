@@ -1,31 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
-  <meta charset="utf-8">
-  <title>Buggy Bus</title>
-</head>
-<body>
 
-  <header>
-    <div class="row">
-      <div class="large-12 columns">
-        <h2>BUGGY BUS</h2>
-        <h3>BADA BING BADA BUS!</h3>
-      </div>
+<header>
+  <div class="row">
+    <div class="large-12 columns">
+      <h2>BUGGY BUS</h2>
+      <h3>BADA BING BADA BUS!</h3>
     </div>
-  </header>
+  </div>
+</header>
 
-  <ul class="small-block-grid-4">
-    <li id="first-li"></li>
-    <li id="second-li">
-      <div class="panel callout radius">
-        <h4>MENU</h4>
+<ul class="small-block-grid-4">
+  <li id="first-li"></li>
+  <li id="second-li">
+    <div class="panel callout radius">
+      <h4>Search</h4>
 
-        <p>
-          <%= form_for :search, :url =>
-          {:action => "create"} do |f| %>
+        <%= form_for :search, :url => {:action => "create"} do |f| %>
           <%= f.label(:departure_location) %>
           <%= f.select :departure_location,
             [["Select",""],
@@ -37,10 +26,7 @@
             ['Richmond, VA', 'Richmond'],
             ['Hampton, VA', 'Hampton']]
           %>
-        </p>
 
-
-        <p>
           <%= f.label(:arrival_location) %>
           <%= f.select(:arrival_location,
             [["Select",""],
@@ -52,25 +38,50 @@
             ['Richmond, VA', 'Richmond'],
             ['Hampton, VA', 'Hampton']])
           %>
-        </p>
-          <p>
-            <%= f.label(:departure_date) %>
-            <%= date_select :search, :departure_date %>
-          <p>
-            <%= submit_tag("Bada Bus") %>
-          </p>
-            <% end %>
-          </p>
-        <!-- <p id='oneway'>
-          <p>oneway</p>
-        </p> -->
-        <p>
-          <%= submit_tag("Lucky Bada Bus") %>
-        </p>
 
-      </div> <!-- panel callout radius -->
-    </li>
-  </ul>  <!-- small-block-grid-3 -->
+          <%= f.label(:departure_date) %>
+          <%= date_select :search, :departure_date %>
+          <%= submit_tag("Bada Bus") %>
+        <% end %>
 
-</body>
-</html>
+    </div> <!-- panel callout radius -->
+  </li>
+</ul>  <!-- small-block-grid-3 -->
+
+<script type="text/javascript" id='results-template'>
+  '<div class="results">
+    <div class="row company-price-row">
+      <div class="small-2 columns">
+        <%%= company_name %>
+      </div>
+      <div class="small-1 columns">
+        <%%= price %>
+      </div>
+      <div class="small-9 columns">
+        <%%= link %>
+      </div>
+    </div>
+
+    <div class="row departure-row">
+      <div class="small-2 columns departure-time">
+        <%%= departure_time %>
+      </div><div class="small-2 columns departure-time">
+        <%%= departure_date %>
+      </div>
+      <div class="small-8 columns departure-location">
+        <%%= departure_location %>
+      </div>
+    </div>
+
+    <div class="row arrival-row">
+      <div class="small-2 columns arrival-time">
+        <%%= arrival_time %>
+      </div><div class="small-2 columns arrival-time">
+        <%%= arrival_date %>
+      </div>
+      <div class="small-8 columns arrival-location">
+        <%%= arrival_location %>
+      </div>
+    </div>
+  </div>'
+</script>
