@@ -39,13 +39,10 @@ $( document ).ready(function() {
       }).done(function(response) {
 
           $.each(response, function(i,e) {
-            debugger;
-
-            console.log(e)
 
             $('body').append('<div>' + e.departure_date + '</div>');
 
-            // var resultsTag = $("<div class='results'>");
+            var resultsTag = $("<div class='row'>");
             // resultsTag.appendTo("body");
             // var companyPriceRowTag = $("<div class='row'>");
             // companyPriceRowTag.appendTo(".results");
