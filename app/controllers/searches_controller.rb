@@ -25,7 +25,6 @@ class SearchesController < ApplicationController
     arrival_location = search_params['arrival_location']
 
     @search_results = Search.collect(departure_date, departure_location, arrival_location)
-
     render json: @search_results
   end
 
