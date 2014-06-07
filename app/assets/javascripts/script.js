@@ -40,7 +40,6 @@ $( document ).ready(function() {
         first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
         first_rowTag.html(first_row);
 
-
           $.each(response, function(i,e) {
             debugger;
 
@@ -52,7 +51,6 @@ $( document ).ready(function() {
             // resultsTag.appendTo("body");
             // var companyPriceRowTag = $("<div class='row'>");
             // companyPriceRowTag.appendTo(".results");
-
             // var small4Tag = $("<div class='small-4 columns'>");
             // small4Tag.text(e.company_id);
             // small4Tag.appendTo(".row");
