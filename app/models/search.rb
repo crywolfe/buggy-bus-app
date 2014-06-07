@@ -3,7 +3,6 @@ class Search < ActiveRecord::Base
   include GotobusScraper
 
   def collect(dep_date, dep_location, arrival_location)
-    day = Time.now.strftime("%Y/%-m/%-d")
 
     mega = MegabusScraper.new
     goto = GotobusScraper.new
