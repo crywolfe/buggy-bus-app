@@ -75,7 +75,6 @@
               small82Tag.text(e.departure_location);
               small82Tag.appendTo(".row");
 
-
               // var departureRowTag = $("<div class='row'>");
               // departureRowTag.appendTo(".results");
 
