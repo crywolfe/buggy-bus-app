@@ -1,17 +1,5 @@
   $( document ).ready(function() {
     // EVENT HANDLER
-    // 1. CLICK ON LOGIN
-    $( "#login_detail" ).hide();
-    $( "#login" ).click(function () {
-      $( "#login_detail" ).slideDown( 200, function() {
-      });
-    });
-
-    // 2. CLICK ON BADA BING SUBMIT
-    $( "#submit" ).click(function () {
-      $( "#login_detail" ).slideUp( 200, function() {
-      });
-    });
 
     // 3. CLICK BADA BUS SEARCH
     $( "form" ).on('submit', function(event) {
