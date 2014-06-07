@@ -19,24 +19,14 @@ class SearchesController < ApplicationController
   end
 
   def create
+
     departure_date = params['search']['departure_date']
     departure_location = search_params['departure_location']
     arrival_location = search_params['arrival_location']
 
-    # @search = Search.create(search_params)
+    @search_results = Search.collect(departure_date, departure_location, arrival_location)
 
-    query_string = "departure_location LIKE ? AND arrival_location LIKE ? AND departure_date LIKE ?"
-
-    @search_results = Search.collect(deparature_date, departure_location, arrival_location)
-
-    respond_to do |format|
-      format.html
-
-      format.json {
-        render json: @search_results
-      }
-    end
-
+    render json: @search_results
   end
 
   private

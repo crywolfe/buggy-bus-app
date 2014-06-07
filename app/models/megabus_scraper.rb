@@ -25,8 +25,8 @@ class MegabusScraper
     dep_date = [temp[1],temp[2],temp[0]].join('/')
     query_string = Rack::Utils.build_query({
       'outboundDepartureDate' => dep_date,
-      'destinationCode'       => @city_hash[to_city],
-      'originCode'            => @city_hash[from_city],
+      'destinationCode'       => @city_hash[to_city.downcase],
+      'originCode'            => @city_hash[from_city.downcase],
       'passengerCount'        => '1'
     })
     @url = @base_url + query_string

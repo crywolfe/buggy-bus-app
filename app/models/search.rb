@@ -1,8 +1,6 @@
 class Search < ActiveRecord::Base
-  include MegabusScraper
-  include GotobusScraper
 
-  def collect(dep_date, dep_location, arrival_location)
+  def self.collect(dep_date, dep_location, arrival_location)
 
     mega = MegabusScraper.new
     goto = GotobusScraper.new
