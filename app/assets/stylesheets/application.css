@@ -135,3 +135,9 @@ li:nth-child(even) {
 #second-li {
   background: transparent;
 }
+
+.results {
+  color: white;
+  background: #111111;
+  opacity: .7;
+}

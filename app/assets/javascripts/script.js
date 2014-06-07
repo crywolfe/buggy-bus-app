@@ -1,7 +1,7 @@
   $( document ).ready(function() {
     // EVENT HANDLER
 
-    // 3. CLICK BADA BUS SEARCH
+    // 1. CLICK BADA BUS SEARCH
     $( "form" ).on('submit', function(event) {
       event.preventDefault();
       $( ".small-block-grid-4" ).slideUp( 300, function() {
@@ -41,7 +41,6 @@
           console.log(data);
         }
         }).done(function(response) {
-          // debugger;
           var first_rowTag = $("<li class='results_header'>");
           first_rowTag.appendTo("body");
           first_row = "DEPARTURE" + "  " + "ARRIVAL" + "  " + "DEPARTURE DATE";
@@ -49,9 +48,45 @@
 
 
             $.each(response, function(i,e) {
-              var rowTag = $("<li class='results'>");
-              rowTag.text(e.departure_date + " " + e.arrival_location + " " + e.departure_location);
-              rowTag.appendTo("body");
+
+
+              var resultsTag = $("<div class='results'>");
+              resultsTag.appendTo("body");
+              var companyPriceRowTag = $("<div class='row'>");
+              companyPriceRowTag.appendTo(".results");
+
+              var small4Tag = $("<div class='small-4 columns'>");
+              small4Tag.text(e.company_id);
+              small4Tag.appendTo(".row");
+
+              var small8Tag = $("<div class='small-8 columns'>");
+              small8Tag.text(e.price);
+              small8Tag.appendTo(".row");
+
+
+              var departureRowTag = $("<div class='row'>");
+              departureRowTag.appendTo(".results");
+
+              var small42Tag = $("<div class='small-4 columns'>");
+              small42Tag.text(e.departure_date);
+              small42Tag.appendTo(".row");
+
+              var small82Tag = $("<div class='small-8 columns'>");
+              small82Tag.text(e.departure_location);
+              small82Tag.appendTo(".row");
+
+
+              var departureRowTag = $("<div class='row'>");
+              departureRowTag.appendTo(".results");
+
+              var small43Tag = $("<div class='small-4 columns'>");
+              small43Tag.text(e.arrival_date);
+              small43Tag.appendTo(".row");
+
+              var small83Tag = $("<div class='small-8 columns'>");
+              small83Tag.text(e.arrival_location);
+              small83Tag.appendTo(".row");
+
             });
 
 
@@ -59,22 +94,11 @@
               $(".results").remove();
               $(".results_header").remove();
 
-
-              // $( "#search_2" ).click( function() {
-              //   $( ".small-block-grid-4" ).slideDown( 350, function() {
-              //     $("#search_2").remove();
-              //   });
-              // });
           });
-
-          // render results dynamically
-
         });
     });
 
-    // 4. CLICK BADA BUS SEARCH
-
-    // 4. CLICK LUCKY
+    // 2. CLICK LUCKY
     $( "#lucky_results" ).hide();
     $( "#lucky" ).click(function () {
       $( "#lucky_results" ).slideDown( "slow", function() {
