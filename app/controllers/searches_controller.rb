@@ -1,19 +1,5 @@
 class SearchesController < ApplicationController
 
-  def show
-    search = Search.find(params["id"])
-     @schedules = Schedule.where(
-      departure_location: "#{search.departure_location}",
-      arrival_location: "#{search.arrival_location}",
-       departure_date: "#{search.departure_date}"
-       )
-
-    # respond_to do |format|
-    #   format.json { render json: @schedules}
-    # end
-    # binding.pry
-  end
-
   def new
     render(:index)
   end

@@ -50,44 +50,44 @@ $( document ).ready(function() {
 
 
             $.each(response, function(i,e) {
-              debugger;
+              // debugger;
 
               var resultsTag = $("<div class='results'>");
               resultsTag.appendTo("body");
-              var companyPriceRowTag = $("<div class='row'>");
+              var companyPriceRowTag = $("<div class='row company-price-row'>");
               companyPriceRowTag.appendTo(".results");
 
               var small4Tag = $("<div class='small-4 columns'>");
               small4Tag.text(e.company_id);
-              small4Tag.appendTo(".row");
+              small4Tag.appendTo(".company-price-row");
 
               var small8Tag = $("<div class='small-8 columns'>");
               small8Tag.text(e.price);
-              small8Tag.appendTo(".row");
+              small8Tag.appendTo(".company-price-row");
 
 
-              var departureRowTag = $("<div class='row'>");
-              departureRowTag.appendTo(".results");
-
-              var small42Tag = $("<div class='small-4 columns'>");
-              small42Tag.text(e.departure_date);
-              small42Tag.appendTo(".row");
-
-              var small82Tag = $("<div class='small-8 columns'>");
-              small82Tag.text(e.departure_location);
-              small82Tag.appendTo(".row");
-
-
-              var departureRowTag = $("<div class='row'>");
-              departureRowTag.appendTo(".results");
-
-              var small43Tag = $("<div class='small-4 columns'>");
-              small43Tag.text(e.arrival_date);
-              small43Tag.appendTo(".row");
-
-              var small83Tag = $("<div class='small-8 columns'>");
-              small83Tag.text(e.arrival_location);
-              small83Tag.appendTo(".row");
+              // var departureRowTag = $("<div class='row departure-row'>");
+              // departureRowTag.appendTo(".results");
+              //
+              // var small42Tag = $("<div class='small-4 columns'>");
+              // small42Tag.text(e.departure_date);
+              // small42Tag.appendTo(".departure-row");
+              //
+              // var small82Tag = $("<div class='small-8 columns'>");
+              // small82Tag.text(e.departure_location);
+              // small82Tag.appendTo(".departure-row");
+              //
+              //
+              // var arrivalRowTag = $("<div class='row arrival-row'>");
+              // arrivalRowTag.appendTo(".results");
+              //
+              // var small43Tag = $("<div class='small-4 columns'>");
+              // small43Tag.text(e.arrival_date);
+              // small43Tag.appendTo(".arrival-row");
+              //
+              // var small83Tag = $("<div class='small-8 columns'>");
+              // small83Tag.text(e.arrival_location);
+              // small83Tag.appendTo(".arrival-row");
 
             });
 
