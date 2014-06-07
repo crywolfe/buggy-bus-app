@@ -64,8 +64,8 @@
               small8Tag.appendTo(".row");
 
 
-              var departureRowTag = $("<div class='row'>");
-              departureRowTag.appendTo(".results");
+              // var departureRowTag = $("<div class='row'>");
+              // departureRowTag.appendTo(".results");
 
               var small42Tag = $("<div class='small-4 columns'>");
               small42Tag.text(e.departure_date);
@@ -76,8 +76,8 @@
               small82Tag.appendTo(".row");
 
 
-              var departureRowTag = $("<div class='row'>");
-              departureRowTag.appendTo(".results");
+              // var departureRowTag = $("<div class='row'>");
+              // departureRowTag.appendTo(".results");
 
               var small43Tag = $("<div class='small-4 columns'>");
               small43Tag.text(e.arrival_date);
