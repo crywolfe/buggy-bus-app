@@ -21,7 +21,7 @@ body {
   /*background: url('/assets/buggybus_background.jpg') center repeat-y #661511; */
   /* add a fallback color of #d6d6d6 */
 /*background-image: url(<%= asset_data_uri 'buggybus_background.jpg'%>) center repeat-y #661511;*/
-  background: image-url('<%= asset path('buggybus_background.jpg') %>');
+  background-image: image-url('<%= asset path('buggybus_background.jpg') %>');
   background-size: 1100px;
   min-height: 300px;
   font-family: 'Comfortaa', 'cursive';
