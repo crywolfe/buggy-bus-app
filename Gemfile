@@ -64,4 +64,4 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'foundation-rails'
-ruby '2.0.0'
+ruby '2.1.0'
