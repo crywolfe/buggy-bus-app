@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.1.0
+  - 2.1.2
 
 before_script:
   - "sh -e /etc/init.d/xvfb start"
@@ -9,7 +9,7 @@ before_script:
 env:
   - PG_USERNAME='postgres'
 script:
-  # - "bundle exec rake db:create"
-  # - "bundle exec rake db:migrate RAILS_ENV=test"
-  # - "bundle exec rake spec"
+  - "bundle exec rake db:create"
+  - "bundle exec rake db:migrate RAILS_ENV=test"
+  - "bundle exec rake spec"
   # - "bundle exec rake jasmine:ci"
