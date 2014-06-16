@@ -67,4 +67,4 @@ gem 'foundation-rails'
 
 gem 'newrelic_rpm'
 
-ruby '2.1.0'
+ruby '2.1.2'
