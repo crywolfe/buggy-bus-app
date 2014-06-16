@@ -12,4 +12,6 @@ rvm:
   - rbx-2
   - rbx
   - ree
-script: bundle exec rake
+  - 2.1.2
+
+# script: bundle exec rake
